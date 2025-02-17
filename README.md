@@ -1,43 +1,22 @@
-# Foobara::EmptyRubyProjectGenerator
+# Foobara::Ai
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library
-into a gem. Put your Ruby code in the file `lib/foobara/empty_ruby_project_generator`. To experiment with that code,
-run `bin/console` for an interactive prompt.
+Currently gives an Ask command based on the foobara code demo. Allows one
+to ask a question and get an answer while specifying which service to use as
+its implementation.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it
-to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with
-instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+Typical stuff. Add `gem "foobara-ai"` to your Gemfile or .gemspec. Or if using in a local script you can also
+`gem install foobara-ai`
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Development
-
-If using Foobara locally, then run the following (TODO: make this no-longer necessary.)
-
-```bash
-bundle config set disable_local_branch_check true
+```ruby
+> result = Ask.run!(question: "What is the pH of honey?", service: "open-ai")
+> puts result
+The pH of honey typically ranges between 3.2 and 4.5.
+>
 ```
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can
-also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the
-version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version,
-push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
@@ -46,4 +25,5 @@ at https://github.com/[USERNAME]/foobara-empty_ruby_project_generator.
 
 ## License
 
-Currently unlicensed. Please see LICENSE.txt for more info.
+The gem is available as open source under the terms of the MPL-2.0 License.
+See [LICENSE.txt](LICENSE.txt) for more info.

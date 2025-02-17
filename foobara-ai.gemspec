@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
 
   spec.summary = "No description. Add one."
   spec.homepage = "https://github.com/foobara/ai"
-  spec.license = "None specified yet"
-  spec.required_ruby_version = ">= #{File.read("#{__dir__}/.ruby-version")}"
+  spec.license = "MPL-2.0"
+  spec.required_ruby_version = Foobara::Ai::MINIMUM_RUBY_VERSION
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
