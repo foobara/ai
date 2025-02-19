@@ -6,17 +6,20 @@ module Foobara
 
         inputs do
           question :string, :required, description: "whatever you want to know!"
-          service :string, one_of: %w[open-ai anthropic], default: "open-ai"
+          service :string, one_of: %w[open-ai anthropic]
+          model :model, default: "gpt-3.5-turbo"
         end
 
         result :string
 
         depends_on OpenAiApi::CreateChatCompletion,
                    Foobara::Ai::AnthropicApi::CreateMessage,
+                   # TODO: can we make it not required to depend on domain mappers??
                    DomainMappers::OpenAiApi::QuestionToCreateChatCompletion,
                    DomainMappers::AnthropicApi::QuestionToCreateMessage
 
         def execute
+          determine_ai_service
           determine_ai_command
           run_ai_service
           build_answer
@@ -24,14 +27,15 @@ module Foobara
           answer
         end
 
-        attr_accessor :ai_command, :response, :answer, :log_entry
+        attr_accessor :ai_command, :response, :answer, :ai_service
+
+        def determine_ai_service
+          self.ai_service = service || domain_map(model, to: :string)
+        end
 
         def determine_ai_command
-          self.ai_command = if service == "open-ai"
-                              OpenAiApi::CreateChatCompletion
-                            else
-                              Foobara::Ai::AnthropicApi::CreateMessage
-                            end
+          # Why does this work???
+          self.ai_command = domain_map(ai_service, to: Foobara::Command)
         end
 
         def run_ai_service

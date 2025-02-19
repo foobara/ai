@@ -8,10 +8,10 @@ RSpec.describe Foobara::Ai::AnswerBot::Ask do
   let(:inputs) do
     {
       question: "what is the pH of honey?",
-      service:
+      model:
     }
   end
-  let(:service) { "open-ai" }
+  let(:model) { "gpt-3.5-turbo" }
 
   it "is successful", vcr: { record: :none } do
     expect(outcome).to be_success
@@ -19,7 +19,7 @@ RSpec.describe Foobara::Ai::AnswerBot::Ask do
   end
 
   context "when using anthropic" do
-    let(:service) { "anthropic" }
+    let(:model) { "claude-3-5-sonnet-20241022" }
 
     it "is successful", vcr: { record: :none } do
       expect(outcome).to be_success

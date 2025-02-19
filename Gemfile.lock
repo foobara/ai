@@ -56,11 +56,11 @@ GEM
       foobara-type-generator
       foobara-typescript-react-command-form-generator
       foobara-typescript-remote-command-generator
-    foobara (0.0.56)
+    foobara (0.0.57)
       bigdecimal
       foobara-util
-    foobara-anthropic-api (0.0.4)
-      foobara
+    foobara-anthropic-api (0.0.7)
+      foobara-http-api-command
     foobara-autocrud-generator (0.0.1)
       foobara
       foobara-files-generator
@@ -84,11 +84,13 @@ GEM
       foobara-files-generator
     foobara-files-generator (0.0.5)
       foobara
+    foobara-http-api-command (0.0.6)
+      foobara
     foobara-local-files-crud-driver-generator (0.0.3)
       foobara
       foobara-files-generator
-    foobara-open-ai-api (0.0.7)
-      foobara
+    foobara-open-ai-api (0.0.10)
+      foobara-http-api-command
     foobara-organization-generator (0.0.2)
       foobara
       foobara-files-generator
@@ -127,7 +129,7 @@ GEM
     foobara-typescript-remote-command-generator (0.0.8)
       foobara
       foobara-files-generator
-    foobara-util (0.0.9)
+    foobara-util (0.0.11)
     formatador (1.1.0)
     guard (2.19.1)
       formatador (>= 0.2.4)
