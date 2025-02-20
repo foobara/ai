@@ -59,11 +59,14 @@ GEM
     foobara (0.0.57)
       bigdecimal
       foobara-util
-    foobara-anthropic-api (0.0.7)
+    foobara-anthropic-api (0.0.8)
+      foobara-cached-command
       foobara-http-api-command
     foobara-autocrud-generator (0.0.1)
       foobara
       foobara-files-generator
+    foobara-cached-command (0.0.2)
+      foobara
     foobara-command-generator (0.0.3)
       foobara
       foobara-files-generator
@@ -75,7 +78,7 @@ GEM
       foobara-files-generator
     foobara-dotenv-loader (0.0.2)
       dotenv
-    foobara-empty-ruby-project-generator (0.0.13)
+    foobara-empty-ruby-project-generator (0.0.14)
       extract-repo
       foobara
       foobara-files-generator
@@ -89,7 +92,8 @@ GEM
     foobara-local-files-crud-driver-generator (0.0.3)
       foobara
       foobara-files-generator
-    foobara-open-ai-api (0.0.10)
+    foobara-open-ai-api (0.0.11)
+      foobara-cached-command
       foobara-http-api-command
     foobara-organization-generator (0.0.2)
       foobara
