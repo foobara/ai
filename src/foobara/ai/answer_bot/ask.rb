@@ -13,16 +13,18 @@ module Foobara
         result :string
 
         depends_on OpenAiApi::CreateChatCompletion,
-                   Foobara::Ai::AnthropicApi::CreateMessage,
-                   # TODO: can we make it not required to depend on domain mappers??
-                   DomainMappers::OpenAiApi::QuestionToCreateChatCompletion,
-                   DomainMappers::AnthropicApi::QuestionToCreateMessage
-
+                   Foobara::Ai::AnthropicApi::CreateMessage
+        # including these is now optional
+        # DomainMappers::ModelToAiService,
+        # DomainMappers::ServiceToCommand,
+        # DomainMappers::OpenAiApi::QuestionToCreateChatCompletion,
+        # DomainMappers::OpenAiApi::ChatCompletionToAnswer,
+        # DomainMappers::AnthropicApi::QuestionToCreateMessage,
+        # DomainMappers::AnthropicApi::MessageResultToAnswer
         def execute
           determine_ai_service
           determine_ai_command
           run_ai_service
-          build_answer
 
           answer
         end
@@ -30,20 +32,15 @@ module Foobara
         attr_accessor :ai_command, :response, :answer, :ai_service
 
         def determine_ai_service
-          self.ai_service = service || domain_map(model, to: :string)
+          self.ai_service = service || domain_map!(model, from: :model)
         end
 
         def determine_ai_command
-          # Why does this work???
-          self.ai_command = domain_map(ai_service, to: Foobara::Command)
+          self.ai_command = domain_map!(ai_service, to: Foobara::Command)
         end
 
         def run_ai_service
-          self.response = run_mapped_subcommand!(ai_command, question)
-        end
-
-        def build_answer
-          self.answer = domain_map(response)
+          self.answer = run_mapped_subcommand!(ai_command, question)
         end
       end
     end
