@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   ]
 
   spec.add_dependency "foobara-anthropic-api"
+  spec.add_dependency "foobara-ollama-api"
   spec.add_dependency "foobara-open-ai-api"
 
   spec.require_paths = ["lib"]

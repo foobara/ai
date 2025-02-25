@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:11434/api/chat
+    body:
+      encoding: UTF-8
+      string: '{"messages":[{"role":"system","content":"You are a scientific-minded
+        assistant who answers concisely and precisely."},{"role":"user","content":"what
+        is the pH of honey?"}],"model":"smollm2:135m","stream":false}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:11434
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 25 Feb 2025 18:43:00 GMT
+      Content-Length:
+      - '686'
+    body:
+      encoding: UTF-8
+      string: '{"model":"smollm2:135m","created_at":"2025-02-25T18:43:00.978157012Z","message":{"role":"assistant","content":"The
+        pH level of honey varies depending on factors such as the origin, climate,
+        and processing method used to extract the honey from the nectar. Generally
+        speaking, honey with a higher concentration of polyphenols (the compounds
+        responsible for its distinctive flavor) has a slightly lower pH than honey
+        with lower levels of polyphenols or those that have undergone mechanical harvesting."},"done_reason":"stop","done":true,"total_duration":1848356731,"load_duration":531099395,"prompt_eval_count":35,"prompt_eval_duration":55000000,"eval_count":68,"eval_duration":1063000000}'
+  recorded_at: Tue, 25 Feb 2025 18:43:00 GMT
+recorded_with: VCR 6.3.1

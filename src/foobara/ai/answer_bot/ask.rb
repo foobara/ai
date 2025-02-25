@@ -6,14 +6,15 @@ module Foobara
 
         inputs do
           question :string, :required, description: "whatever you want to know!"
-          service :string, one_of: %w[open-ai anthropic]
+          service :string, one_of: %w[open-ai anthropic ollama]
           model :model, default: "gpt-3.5-turbo"
         end
 
         result :string
 
         depends_on OpenAiApi::CreateChatCompletion,
-                   Foobara::Ai::AnthropicApi::CreateMessage
+                   AnthropicApi::CreateMessage,
+                   OllamaApi::GenerateChatCompletion
         # including these is now optional
         # DomainMappers::ModelToAiService,
         # DomainMappers::ServiceToCommand,
@@ -40,7 +41,7 @@ module Foobara
         end
 
         def run_ai_service
-          self.answer = run_mapped_subcommand!(ai_command, question)
+          self.answer = run_mapped_subcommand!(ai_command, question:, model:)
         end
       end
     end

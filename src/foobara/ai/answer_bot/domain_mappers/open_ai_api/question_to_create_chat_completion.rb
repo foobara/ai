@@ -1,10 +1,15 @@
+require_relative "../../types/model_enum"
+
 module Foobara
   module Ai
     module AnswerBot
       module DomainMappers
         module OpenAiApi
           class QuestionToCreateChatCompletion < Foobara::DomainMapper
-            from :string
+            from do
+              question :string, :required
+              model :model
+            end
             to Foobara::Ai::OpenAiApi::CreateChatCompletion
 
             def map
@@ -19,10 +24,20 @@ module Foobara
                     content: question
                   }
                 ]
-              }
+              }.tap do |inputs|
+                if model
+                  inputs[:model] = model
+                end
+              end
             end
 
-            alias question from
+            def question
+              from[:question]
+            end
+
+            def model
+              from[:model]
+            end
           end
         end
       end

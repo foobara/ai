@@ -1,6 +1,7 @@
 require "foobara/all"
 require "foobara/open_ai_api"
 require "foobara/anthropic_api"
+require "foobara/ollama_api"
 
 require_relative "../../src/foobara/ai/answer_bot"
 

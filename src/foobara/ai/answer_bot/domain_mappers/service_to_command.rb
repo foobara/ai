@@ -13,6 +13,8 @@ module Foobara
               Ai::OpenAiApi::CreateChatCompletion
             when "anthropic"
               Ai::AnthropicApi::CreateMessage
+            when "ollama"
+              Ai::OllamaApi::GenerateChatCompletion
             else
               # :nocov:
               raise "Unknown service: #{service}"

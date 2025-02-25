@@ -4,18 +4,21 @@ module Foobara
   module Ai
     module AnswerBot
       module DomainMappers
-        module AnthropicApi
-          class QuestionToCreateMessage < Foobara::DomainMapper
+        module OllamaApi
+          class QuestionToGenerateChatCompletion < Foobara::DomainMapper
             from do
               question :string, :required
               model :model
             end
-            to Foobara::Ai::AnthropicApi::CreateMessage
+            to Foobara::Ai::OllamaApi::GenerateChatCompletion
 
             def map
               {
-                system: "You are a scientific-minded assistant who answers concisely and precisely.",
                 messages: [
+                  {
+                    role: "system",
+                    content: "You are a scientific-minded assistant who answers concisely and precisely."
+                  },
                   {
                     role: "user",
                     content: question

@@ -12,10 +12,12 @@ module Foobara
             symbol = model.to_sym
 
             # TODO: use Enumerated::Values#value? instead of #all_values
-            if Ai::OpenAiApi::Types::ModelEnum.all_values.include?(symbol)
+            if Ai::OpenAiApi::Types::ModelEnum.value?(symbol)
               "open-ai"
-            elsif Ai::AnthropicApi::Types::ModelEnum.all_values.include?(symbol)
+            elsif Ai::AnthropicApi::Types::ModelEnum.value?(symbol)
               "anthropic"
+            elsif Ai::OllamaApi::Types::ModelEnum.value?(symbol)
+              "ollama"
             else
               # :nocov:
               raise "Unknown model: #{model}"
