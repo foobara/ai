@@ -13,7 +13,7 @@ module Foobara
             def map
               {
                 id: model.id,
-                service: Types::ServiceEnum::ANTHROPIC
+                service: Types::ServiceEnum::OPEN_AI
               }
             end
 
