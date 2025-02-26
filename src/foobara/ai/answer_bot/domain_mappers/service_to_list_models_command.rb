@@ -12,11 +12,11 @@ module Foobara
           def map
             case service
             when Types::ServiceEnum::OPEN_AI
-              Ai::OpenAiApi::CreateChatCompletion
+              Ai::OpenAiApi::ListModels
             when Types::ServiceEnum::ANTHROPIC
-              Ai::AnthropicApi::CreateMessage
+              Ai::AnthropicApi::ListModels
             when Types::ServiceEnum::OLLAMA
-              Ai::OllamaApi::GenerateChatCompletion
+              Ai::OllamaApi::ListLocalModels
             else
               # :nocov:
               raise "Unknown service: #{service}"

@@ -5,9 +5,9 @@ module Foobara
         description "Ask a question and receive the knowledge you seek."
 
         inputs do
-          question :string, :required, description: "whatever you want to know!"
-          service :string, one_of: %w[open-ai anthropic ollama]
-          model :model, default: "gpt-3.5-turbo"
+          question :string, :required, "whatever you want to know!"
+          service :service, "If two services expose the same model, you can specify which one to use."
+          model :model, default: "gpt-3.5-turbo", description: "The model to use."
         end
 
         result :string

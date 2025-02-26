@@ -57,7 +57,7 @@ GEM
       foobara-type-generator
       foobara-typescript-react-command-form-generator
       foobara-typescript-remote-command-generator
-    foobara (0.0.64)
+    foobara (0.0.65)
       bigdecimal
       foobara-util
     foobara-anthropic-api (0.0.8)
@@ -219,7 +219,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.2)
-    rubocop (1.72.2)
+    rubocop (1.73.0)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)

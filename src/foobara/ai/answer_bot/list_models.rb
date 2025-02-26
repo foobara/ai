@@ -1,6 +1,4 @@
-require_relative "domain_mappers/anthropic_api/model_to_model_enum_string"
-require_relative "domain_mappers/ollama_api/model_to_model_enum_string"
-require_relative "domain_mappers/open_ai_api/model_to_model_enum_string"
+require_relative "types/model"
 
 module Foobara
   module Ai
@@ -8,7 +6,7 @@ module Foobara
       class ListModels < Foobara::Command
         description "List of all model strings you can use"
 
-        result [:string]
+        result [Model]
 
         LIST_COMMANDS = [
           OpenAiApi::ListModels,
@@ -20,34 +18,38 @@ module Foobara
 
         def execute
           run_each_list_command_and_collect_models
-          map_models_to_model_enum_strings
-          sort_model_enum_strings
+          map_to_foobara_models
+          sort_models
 
-          model_enum_strings
+          models
         end
 
-        attr_accessor :model_enum_strings
+        attr_accessor :models
 
-        def models
-          @models ||= []
+        def service_models
+          @service_models ||= []
         end
 
         def run_each_list_command_and_collect_models
           threads = []
 
           LIST_COMMANDS.map do |list_command|
-            Thread.new { models.concat(run_subcommand!(list_command)) }
+            Thread.new { service_models.concat(run_subcommand!(list_command)) }
           end.each(&:join)
 
           threads.each(&:join)
         end
 
-        def map_models_to_model_enum_strings
-          self.model_enum_strings = models.map { |model| domain_map!(model) }
+        def map_to_foobara_models
+          self.models = service_models.map do |model|
+            domain_map!(model, to: Types::Model)
+          end
         end
 
-        def sort_model_enum_strings
-          model_enum_strings.sort!
+        def sort_models
+          models.sort_by do |model|
+            [model.service, model.id]
+          end
         end
       end
     end

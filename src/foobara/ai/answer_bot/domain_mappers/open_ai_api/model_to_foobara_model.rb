@@ -5,12 +5,16 @@ module Foobara
     module AnswerBot
       module DomainMappers
         module OpenAiApi
-          class ModelToModelEnumString < Foobara::DomainMapper
+          # TODO: rename these
+          class ModelToFoobaraModel < Foobara::DomainMapper
             from Foobara::Ai::OpenAiApi::Types::Model
-            to :string
+            to Types::Model
 
             def map
-              model.id
+              {
+                id: model.id,
+                service: Types::ServiceEnum::ANTHROPIC
+              }
             end
 
             alias model from

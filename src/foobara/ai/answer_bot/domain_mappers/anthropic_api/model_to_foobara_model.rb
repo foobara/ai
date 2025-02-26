@@ -1,4 +1,4 @@
-require_relative "../../types/model_enum"
+require_relative "../../types/model"
 
 module Foobara
   module Ai
@@ -6,12 +6,15 @@ module Foobara
       module DomainMappers
         module AnthropicApi
           # TODO: rename these
-          class ModelToModelEnumString < Foobara::DomainMapper
+          class ModelToFoobaraModel < Foobara::DomainMapper
             from Foobara::Ai::AnthropicApi::Types::Model
-            to :string
+            to Types::Model
 
             def map
-              model.id
+              {
+                id: model.id,
+                service: Types::ServiceEnum::ANTHROPIC
+              }
             end
 
             alias model from
