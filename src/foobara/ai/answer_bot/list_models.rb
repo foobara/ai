@@ -24,20 +24,18 @@ module Foobara
           models
         end
 
-        attr_accessor :models
-
         def service_models
           @service_models ||= []
         end
 
+        attr_accessor :models
+
         def run_each_list_command_and_collect_models
-          threads = []
-
-          LIST_COMMANDS.map do |list_command|
+          threads = LIST_COMMANDS.map do |list_command|
             Thread.new { service_models.concat(run_subcommand!(list_command)) }
-          end.each(&:join)
+          end
 
-          threads.each(&:join)
+          self.models = threads.each(&:join).map(&:value)
         end
 
         def map_to_foobara_models
@@ -47,7 +45,7 @@ module Foobara
         end
 
         def sort_models
-          models.sort_by do |model|
+          models.sort_by! do |model|
             [model.service, model.id]
           end
         end
