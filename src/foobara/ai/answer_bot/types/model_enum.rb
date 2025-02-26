@@ -10,10 +10,18 @@ module Foobara
       module Types
         models = []
 
-        ServiceEnum.all_values.each do |service|
-          list_models_command = AnswerBot.foobara_domain_map!(service)
-          models.concat(list_models_command.run!)
-        end
+        mutex = Mutex.new
+
+        ServiceEnum.all_values.map do |service|
+          Thread.new do
+            list_models_command = AnswerBot.foobara_domain_map!(service)
+            list_of_models = list_models_command.run!
+
+            mutex.synchronize do
+              models.concat(list_of_models)
+            end
+          end
+        end.each(&:join)
 
         models.map! do |model|
           AnswerBot.foobara_domain_map!(model, to: :string)
