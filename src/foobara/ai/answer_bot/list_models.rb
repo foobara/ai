@@ -6,7 +6,7 @@ module Foobara
       class ListModels < Foobara::Command
         description "List of all model strings you can use"
 
-        result [Model]
+        result [Types::Model]
 
         LIST_COMMANDS = [
           OpenAiApi::ListModels,

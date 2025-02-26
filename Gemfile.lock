@@ -57,7 +57,7 @@ GEM
       foobara-type-generator
       foobara-typescript-react-command-form-generator
       foobara-typescript-remote-command-generator
-    foobara (0.0.65)
+    foobara (0.0.67)
       bigdecimal
       foobara-util
     foobara-anthropic-api (0.0.8)
