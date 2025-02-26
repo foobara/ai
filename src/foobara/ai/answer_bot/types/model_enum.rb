@@ -8,24 +8,16 @@ module Foobara
   module Ai
     module AnswerBot
       module Types
-        models = []
-
-        mutex = Mutex.new
-
-        ServiceEnum.all_values.map do |service|
+        threads = ServiceEnum.all_values.map do |service|
           Thread.new do
-            list_models_command = AnswerBot.foobara_domain_map!(service)
-            list_of_models = list_models_command.run!
-
-            mutex.synchronize do
-              models.concat(list_of_models)
+            service_models = AnswerBot.foobara_domain_map!(service).run!
+            service_models.map do |model|
+              AnswerBot.foobara_domain_map!(model, to: :string)
             end
           end
-        end.each(&:join)
-
-        models.map! do |model|
-          AnswerBot.foobara_domain_map!(model, to: :string)
         end
+
+        models = threads.each(&:join).map(&:value).flatten
 
         unless models.uniq == models
           # :nocov:
