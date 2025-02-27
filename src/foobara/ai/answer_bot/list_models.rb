@@ -4,6 +4,9 @@ module Foobara
   module Ai
     module AnswerBot
       class ListModels < Foobara::Command
+        include CachedCommand
+        self.foobara_cache_expiry = 24 * 60 * 60
+
         description "List of all model strings you can use"
 
         result [Types::Model]

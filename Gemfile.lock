@@ -3,6 +3,7 @@ PATH
   specs:
     foobara-ai (0.0.1)
       foobara-anthropic-api
+      foobara-cached-command
       foobara-ollama-api
       foobara-open-ai-api
 
