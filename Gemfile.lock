@@ -3,7 +3,6 @@ PATH
   specs:
     foobara-ai (0.0.1)
       foobara-anthropic-api
-      foobara-cached-command
       foobara-ollama-api
       foobara-open-ai-api
 
@@ -60,6 +59,7 @@ GEM
       foobara-typescript-remote-command-generator
     foobara (0.0.67)
       bigdecimal
+      foobara-lru-cache
       foobara-util
     foobara-anthropic-api (0.0.8)
       foobara-cached-command
@@ -89,12 +89,13 @@ GEM
       foobara-files-generator
     foobara-files-generator (0.0.5)
       foobara
-    foobara-http-api-command (0.0.6)
+    foobara-http-api-command (0.0.7)
       foobara
     foobara-local-files-crud-driver-generator (0.0.3)
       foobara
       foobara-files-generator
-    foobara-ollama-api (0.0.2)
+    foobara-lru-cache (0.0.1)
+    foobara-ollama-api (0.0.3)
       foobara-http-api-command
     foobara-open-ai-api (0.0.11)
       foobara-cached-command
@@ -220,7 +221,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.2)
-    rubocop (1.73.0)
+    rubocop (1.73.1)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
