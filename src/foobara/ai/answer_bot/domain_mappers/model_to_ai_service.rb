@@ -6,7 +6,7 @@ module Foobara
     module AnswerBot
       module DomainMappers
         class ModelToAiService < Foobara::DomainMapper
-          from :model
+          from :model_enum
           to :service
 
           def map

@@ -10,7 +10,7 @@ module Foobara
 
         class Model < Foobara::Model
           attributes do
-            id :model, :required
+            id :model_enum, :required
             service :service, :required
           end
         end

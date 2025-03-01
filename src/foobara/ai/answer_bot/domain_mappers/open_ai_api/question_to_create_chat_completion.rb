@@ -8,7 +8,7 @@ module Foobara
           class QuestionToCreateChatCompletion < Foobara::DomainMapper
             from do
               question :string, :required
-              model :model
+              model :model_enum
             end
             to Foobara::Ai::OpenAiApi::CreateChatCompletion
 

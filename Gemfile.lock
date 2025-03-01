@@ -57,11 +57,11 @@ GEM
       foobara-type-generator
       foobara-typescript-react-command-form-generator
       foobara-typescript-remote-command-generator
-    foobara (0.0.67)
+    foobara (0.0.68)
       bigdecimal
       foobara-lru-cache
       foobara-util
-    foobara-anthropic-api (0.0.8)
+    foobara-anthropic-api (0.0.9)
       foobara-cached-command
       foobara-http-api-command
     foobara-autocrud-generator (0.0.1)
@@ -94,10 +94,10 @@ GEM
     foobara-local-files-crud-driver-generator (0.0.3)
       foobara
       foobara-files-generator
-    foobara-lru-cache (0.0.1)
-    foobara-ollama-api (0.0.3)
+    foobara-lru-cache (0.0.2)
+    foobara-ollama-api (0.0.4)
       foobara-http-api-command
-    foobara-open-ai-api (0.0.11)
+    foobara-open-ai-api (0.0.12)
       foobara-cached-command
       foobara-http-api-command
     foobara-organization-generator (0.0.2)

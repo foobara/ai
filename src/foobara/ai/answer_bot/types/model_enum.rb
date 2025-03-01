@@ -30,7 +30,7 @@ module Foobara
         ModelEnum = Foobara::Enumerated.make_module(models)
       end
 
-      foobara_register_type(:model, :symbol, one_of: Types::ModelEnum)
+      foobara_register_type(:model_enum, :symbol, one_of: Types::ModelEnum)
     end
   end
 end

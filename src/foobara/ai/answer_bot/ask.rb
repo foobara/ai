@@ -7,7 +7,7 @@ module Foobara
         inputs do
           question :string, :required, "whatever you want to know!"
           service :service, "If two services expose the same model, you can specify which one to use."
-          model :model, default: "gpt-3.5-turbo", description: "The model to use."
+          model :model_enum, default: "gpt-3.5-turbo", description: "The model to use."
         end
 
         result :string
@@ -33,7 +33,7 @@ module Foobara
         attr_accessor :ai_command, :response, :answer, :ai_service
 
         def determine_ai_service
-          self.ai_service = service || domain_map!(model, from: :model)
+          self.ai_service = service || domain_map!(model, from: :model_enum)
         end
 
         def determine_ai_command
