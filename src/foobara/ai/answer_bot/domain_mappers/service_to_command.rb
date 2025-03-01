@@ -5,7 +5,7 @@ module Foobara
     module AnswerBot
       module DomainMappers
         class ServiceToChatCompletionCommand < Foobara::DomainMapper
-          from :service
+          from :service_enum
           # TODO: create a :class type? Maybe with an inherits: validator?
           to Class
 

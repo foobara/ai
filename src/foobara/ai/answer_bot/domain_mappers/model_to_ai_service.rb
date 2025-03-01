@@ -7,12 +7,11 @@ module Foobara
       module DomainMappers
         class ModelToAiService < Foobara::DomainMapper
           from :model_enum
-          to :service
+          to :service_enum
 
           def map
             symbol = model.to_sym
 
-            # TODO: use Enumerated::Values#value? instead of #all_values
             if Ai::OpenAiApi::Types::ModelEnum.value?(symbol)
               Types::ServiceEnum::OPEN_AI
             elsif Ai::AnthropicApi::Types::ModelEnum.value?(symbol)

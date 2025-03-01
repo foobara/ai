@@ -6,7 +6,7 @@ module Foobara
 
         inputs do
           question :string, :required, "whatever you want to know!"
-          service :service, "If two services expose the same model, you can specify which one to use."
+          service :service_enum, "If two services expose the same model, you can specify which one to use."
           model :model_enum, default: "gpt-3.5-turbo", description: "The model to use."
         end
 

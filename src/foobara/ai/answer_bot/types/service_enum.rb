@@ -9,7 +9,7 @@ module Foobara
         )
       end
 
-      foobara_register_type(:service, :symbol, one_of: Types::ServiceEnum)
+      foobara_register_type(:service_enum, :symbol, one_of: Types::ServiceEnum)
     end
   end
 end
