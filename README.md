@@ -1,6 +1,6 @@
 # Foobara::Ai
 
-Currently gives an Ask command based on the foobara code demo. Allows one
+Currently, gives an Ask command based on the foobara code demo. Allows one
 to ask a question and get an answer while specifying which service to use as
 its implementation.
 
@@ -21,8 +21,9 @@ The pH of honey typically ranges between 3.2 and 4.5.
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub
-at https://github.com/[USERNAME]/foobara-empty_ruby_project_generator.
+at https://github.com/foobara/ai
 
 ## License
 
-Currently unlicensed. Please see LICENSE.txt for more info.
+The gem is available as open source under the terms of the MPL-2.0 License.
+See [LICENSE.txt](LICENSE.txt) for more info.
