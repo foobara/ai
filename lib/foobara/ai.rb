@@ -11,17 +11,17 @@ module Foobara
 
       ai_services = {}
 
-      Types::ServiceEnum.all_values.each do |service|
-        domain = case service
-                 when Types::ServiceEnum::OPEN_AI
-                   OpenAiApi
-                 when Types::ServiceEnum::ANTHROPIC
-                   AnthropicApi
-                 when Types::ServiceEnum::OLLAMA
-                   OllamaApi
-                 end
+      if defined?(Foobara::Ai::OpenAiApi)
+        ai_services[Types::ServiceEnum::OPEN_AI] = OpenAiApi
+      end
+      if defined?(Foobara::Ai::AnthropicApi)
+        ai_services[Types::ServiceEnum::ANTHROPIC] = AnthropicApi
+      end
+      if defined?(Foobara::Ai::OllamaApi)
+        ai_services[Types::ServiceEnum::OLLAMA] = OllamaApi
+      end
 
-        ai_services[service] = domain
+      ai_services.each_value do |domain|
         foobara_depends_on domain
       end
 
