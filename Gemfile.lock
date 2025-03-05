@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    foobara-ai (0.0.5)
+    foobara-ai (0.0.6)
       foobara-anthropic-api
       foobara-ollama-api
       foobara-open-ai-api

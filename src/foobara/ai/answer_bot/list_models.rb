@@ -1,3 +1,4 @@
+require_relative "types/service_enum"
 require_relative "types/model"
 
 module Foobara
@@ -8,11 +9,13 @@ module Foobara
 
         result [Types::Model]
 
-        LIST_COMMANDS = [
-          OpenAiApi::ListModels,
-          AnthropicApi::ListModels,
-          OllamaApi::ListLocalModels
-        ].freeze
+        LIST_COMMANDS = AI_SERVICES.values.map do |domain|
+          if domain == OllamaApi
+            OllamaApi::ListLocalModels
+          else
+            domain::ListModels
+          end
+        end
 
         depends_on(*LIST_COMMANDS)
 
