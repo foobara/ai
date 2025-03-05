@@ -23,10 +23,6 @@ Gem::Specification.new do |spec|
     "CHANGELOG.md"
   ]
 
-  spec.add_dependency "foobara-anthropic-api"
-  spec.add_dependency "foobara-ollama-api"
-  spec.add_dependency "foobara-open-ai-api"
-
   spec.require_paths = ["lib"]
   spec.metadata["rubygems_mfa_required"] = "true"
 end
