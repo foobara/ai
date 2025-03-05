@@ -13,16 +13,11 @@ module Foobara
 
         result :string
 
-        depends_on OpenAiApi::CreateChatCompletion,
-                   AnthropicApi::CreateMessage,
-                   OllamaApi::GenerateChatCompletion
-        # including these is now optional
-        # DomainMappers::ModelToAiService,
-        # DomainMappers::ServiceToCommand,
-        # DomainMappers::OpenAiApi::QuestionToCreateChatCompletion,
-        # DomainMappers::OpenAiApi::ChatCompletionToAnswer,
-        # DomainMappers::AnthropicApi::QuestionToCreateMessage,
-        # DomainMappers::AnthropicApi::MessageResultToAnswer
+        AI_SERVICES.each_key do |service|
+          command = Foobara::Ai::AnswerBot::DomainMappers::ServiceToChatCompletionCommand.map!(service)
+          depends_on command
+        end
+
         def execute
           determine_ai_service
           determine_ai_command
