@@ -1,14 +1,11 @@
 require_relative "service_enum"
 require_relative "../domain_mappers/service_to_list_models_command"
-require_relative "../domain_mappers/anthropic_api/model_to_model_enum_string"
-require_relative "../domain_mappers/ollama_api/model_to_model_enum_string"
-require_relative "../domain_mappers/open_ai_api/model_to_model_enum_string"
 
 module Foobara
   module Ai
     module AnswerBot
       module Types
-        threads = ServiceEnum.all_values.map do |service|
+        threads = AI_SERVICES.keys.map do |service|
           Thread.new do
             service_models = AnswerBot.foobara_domain_map!(service).run!
             service_models.map do |model|

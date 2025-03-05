@@ -1,10 +1,8 @@
-require_relative "../types/service_enum"
-
 module Foobara
   module Ai
     module AnswerBot
       module DomainMappers
-        class ServiceToChatCompletionCommand < Foobara::DomainMapper
+        class ServiceToListModelsCommand < Foobara::DomainMapper
           from :service_enum
           # TODO: create a :class type? Maybe with an inherits: validator?
           to Class

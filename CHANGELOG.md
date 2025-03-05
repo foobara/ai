@@ -1,4 +1,4 @@
-## [0.0.7] - 2025-03-04
+## [0.0.8] - 2025-03-05
 
 - Do not require all 3 services to function. Let user require which services they want to use.
 

@@ -38,7 +38,7 @@ module Foobara
         end
 
         def determine_ai_command
-          self.ai_command = domain_map!(ai_service, to: Foobara::Command)
+          self.ai_command = Foobara::Ai::AnswerBot::DomainMappers::ServiceToChatCompletionCommand.map!(ai_service)
         end
 
         def run_ai_service

@@ -28,6 +28,12 @@ module Foobara
       AI_SERVICES = ai_services
 
       base_dir = "#{__dir__}/../../src/foobara/ai/answer_bot"
+
+      AI_SERVICES.each_value do |domain|
+        path = Util.underscore(domain.foobara_domain_name)
+        require_relative "#{base_dir}/domain_mappers/#{path}/model_to_model_enum_string"
+      end
+
       Util.require_directory "#{base_dir}/types"
       Dir["#{base_dir}/domain_mappers/*.rb"].each { |f| require f }
       Dir["#{base_dir}/*.rb"].each { |f| require f }

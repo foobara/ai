@@ -1,5 +1,3 @@
-require_relative "../../types/model_enum"
-
 module Foobara
   module Ai
     module AnswerBot
