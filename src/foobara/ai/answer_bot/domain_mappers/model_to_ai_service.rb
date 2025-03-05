@@ -12,17 +12,13 @@ module Foobara
           def map
             symbol = model.to_sym
 
-            if Ai::OpenAiApi::Types::ModelEnum.value?(symbol)
-              Types::ServiceEnum::OPEN_AI
-            elsif Ai::AnthropicApi::Types::ModelEnum.value?(symbol)
-              Types::ServiceEnum::ANTHROPIC
-            elsif Ai::OllamaApi::Types::ModelEnum.value?(symbol)
-              Types::ServiceEnum::OLLAMA
-            else
-              # :nocov:
-              raise "Unknown model: #{model}"
-              # :nocov:
+            AnswerBot::AI_SERVICES.each_pair do |service, domain|
+              return service if domain::Types::ModelEnum.value?(symbol)
             end
+
+            # :nocov:
+            raise "Unknown model: #{model}"
+            # :nocov:
           end
 
           alias model from

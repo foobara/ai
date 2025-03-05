@@ -1,3 +1,7 @@
+## [0.0.5] - 2025-03-04
+
+- Do not require all 3 services to function. Let user require which services they want to use.
+
 ## [0.0.4] - 2025-03-04
 
 - Add an instructions input that translates to a system prompt

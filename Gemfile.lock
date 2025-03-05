@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    foobara-ai (0.0.4)
+    foobara-ai (0.0.5)
       foobara-anthropic-api
       foobara-ollama-api
       foobara-open-ai-api
@@ -61,7 +61,7 @@ GEM
       bigdecimal
       foobara-lru-cache
       foobara-util
-    foobara-anthropic-api (0.0.9)
+    foobara-anthropic-api (0.0.10)
       foobara-cached-command
       foobara-http-api-command
     foobara-autocrud-generator (0.0.1)
@@ -298,4 +298,4 @@ RUBY VERSION
    ruby 3.4.2p28
 
 BUNDLED WITH
-   2.6.3
+   2.6.5
