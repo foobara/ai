@@ -6,6 +6,7 @@ module Foobara
 
         inputs do
           question :string, :required, "whatever you want to know!"
+          instructions :string, "Results in a system prompt. You can specify how you want the LLM to behave."
           service :service_enum, "If two services expose the same model, you can specify which one to use."
           model :model_enum, default: "gpt-3.5-turbo", description: "The model to use."
         end
@@ -41,7 +42,13 @@ module Foobara
         end
 
         def run_ai_service
-          self.answer = run_mapped_subcommand!(ai_command, question:, model:)
+          inputs = { question:, model: }
+
+          if instructions
+            inputs[:instructions] = instructions
+          end
+
+          self.answer = run_mapped_subcommand!(ai_command, inputs)
         end
       end
     end

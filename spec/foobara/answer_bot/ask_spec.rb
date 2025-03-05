@@ -8,6 +8,7 @@ RSpec.describe Foobara::Ai::AnswerBot::Ask do
   let(:inputs) do
     {
       question: "what is the pH of honey?",
+      instructions: "You are a scientific-minded assistant who answers concisely and precisely.",
       model:
     }
   end
