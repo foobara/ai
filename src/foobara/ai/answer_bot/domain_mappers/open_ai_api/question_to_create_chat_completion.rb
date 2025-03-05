@@ -8,6 +8,8 @@ module Foobara
           class QuestionToCreateChatCompletion < Foobara::DomainMapper
             from do
               question :string, :required
+              instructions :string,
+                           default: "You are a scientific-minded assistant who answers concisely and precisely."
               model :model_enum
             end
             to Foobara::Ai::OpenAiApi::CreateChatCompletion
@@ -17,7 +19,7 @@ module Foobara
                 messages: [
                   {
                     role: "system",
-                    content: "You are a scientific-minded assistant who answers concisely and precisely."
+                    content: instructions
                   },
                   {
                     role: "user",
@@ -37,6 +39,10 @@ module Foobara
 
             def model
               from[:model]
+            end
+
+            def instructions
+              from[:instructions]
             end
           end
         end
