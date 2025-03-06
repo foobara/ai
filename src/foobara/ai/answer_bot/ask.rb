@@ -8,7 +8,7 @@ module Foobara
           question :string, :required, "whatever you want to know!"
           instructions :string, "Results in a system prompt. You can specify how you want the LLM to behave."
           service :service_enum, "If two services expose the same model, you can specify which one to use."
-          model :model_enum, default: "gpt-3.5-turbo", description: "The model to use."
+          model :model_enum, default: "claude-3-7-sonnet-20250219", description: "The model to use."
         end
 
         result :string
