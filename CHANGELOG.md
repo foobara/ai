@@ -1,3 +1,8 @@
+## [0.0.11] - 2025-03-06
+
+- Fix bug that broke ListModels
+- Change default model to Claude 3.7
+
 ## [0.0.10] - 2025-03-05
 
 - Do not require all 3 services to function. Let user require which services they want to use.

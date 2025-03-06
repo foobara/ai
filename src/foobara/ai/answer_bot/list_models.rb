@@ -10,7 +10,7 @@ module Foobara
         result [Types::Model]
 
         LIST_COMMANDS = AI_SERVICES.keys.map do |service|
-          Foobara::Ai::AnswerBot::DomainMappers::ServiceToChatCompletionCommand.map!(service)
+          Foobara::Ai::AnswerBot::DomainMappers::ServiceToListModelsCommand.map!(service)
         end
 
         depends_on(*LIST_COMMANDS)
