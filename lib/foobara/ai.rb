@@ -21,6 +21,13 @@ module Foobara
         ai_services[Types::ServiceEnum::OLLAMA] = OllamaApi
       end
 
+      if ai_services.empty?
+        # :nocov:
+        require "foobara/anthropic_api"
+        ai_services = { Types::ServiceEnum::ANTHROPIC => AnthropicApi }
+        # :nocov:
+      end
+
       ai_services.each_value do |domain|
         foobara_depends_on domain
       end
