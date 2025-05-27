@@ -5,16 +5,27 @@ module Foobara
   module Ai
     module AnswerBot
       module Types
-        threads = AI_SERVICES.keys.map do |service|
-          Thread.new do
-            service_models = AnswerBot.foobara_domain_map!(service).run!
-            service_models.map do |model|
-              AnswerBot.foobara_domain_map!(model, to: :string)
-            end
+        models = []
+        AI_SERVICES.each_key do |service|
+          service_models = AnswerBot.foobara_domain_map!(service).run!
+          service_models.map do |model|
+            models << AnswerBot.foobara_domain_map!(model, to: :string)
           end
         end
 
-        models = threads.each(&:join).map(&:value).flatten
+        # Doing this in a threaded fashion creates a race condition somewhere for some unidentified reason
+        # so commenting this all out for now.
+        #
+        # threads = AI_SERVICES.keys.map do |service|
+        #           Thread.new do
+        #             service_models = AnswerBot.foobara_domain_map!(service).run!
+        #             service_models.map do |model|
+        #               AnswerBot.foobara_domain_map!(model, to: :string)
+        #             end
+        #           end
+        #         end
+        #
+        #         models = threads.each(&:join).map(&:value).flatten
 
         unless models.uniq == models
           # :nocov:

@@ -1,3 +1,7 @@
+## [0.0.12] - 2025-05-27
+
+- Do not load service models in parallel due to undiagnosed race condition somewhere
+
 ## [0.0.11] - 2025-03-06
 
 - Fix bug that broke ListModels

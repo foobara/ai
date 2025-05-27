@@ -2,10 +2,10 @@ module Foobara
   module Ai
     module AnswerBot
       module Types
-        services = %w[
-          open-ai
-          anthropic
-          ollama
+        services = [
+          "open-ai",
+          "anthropic",
+          "ollama"
         ]
 
         ServiceEnum = Foobara::Enumerated.make_module(services)
