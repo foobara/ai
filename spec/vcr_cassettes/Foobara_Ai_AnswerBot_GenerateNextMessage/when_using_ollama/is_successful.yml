@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:11434/api/chat
+    body:
+      encoding: UTF-8
+      string: '{"model":"smollm2:135m","messages":[{"role":"system","content":"You
+        are like a scientist that answers questions very concisely and accurately."},{"role":"user","content":"What
+        is the pH of honey?"},{"role":"assistant","content":"Honey typically has a
+        pH between 3.4 and 6.1, with an average pH of about 3.9. The acidity of honey
+        is due to the presence of organic acids, primarily gluconic acid, which is
+        produced by glucose oxidase during honey formation."},{"role":"user","content":"What
+        about vinegar?"}],"stream":false,"options":{"temperature":0.0}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 28 Jun 2025 03:12:36 GMT
+      Content-Length:
+      - '526'
+    body:
+      encoding: UTF-8
+      string: '{"model":"smollm2:135m","created_at":"2025-06-28T03:12:36.862638628Z","message":{"role":"assistant","content":"Vinegar
+        typically has a pH between 4 and 6, with an average pH of around 5.0-7.0.
+        The acidity of vinegar is due to the presence of acetic acid, which is produced
+        by microorganisms in fermented foods like vinegar production."},"done_reason":"stop","done":true,"total_duration":10342668698,"load_duration":666562550,"prompt_eval_count":108,"prompt_eval_duration":5740371205,"eval_count":56,"eval_duration":3927639704}'
+  recorded_at: Sat, 28 Jun 2025 03:12:36 GMT
+recorded_with: VCR 6.3.1

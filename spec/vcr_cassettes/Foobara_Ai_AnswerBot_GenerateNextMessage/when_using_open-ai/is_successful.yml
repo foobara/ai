@@ -1,0 +1,121 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"You
+        are like a scientist that answers questions very concisely and accurately."},{"role":"user","content":"What
+        is the pH of honey?"},{"role":"assistant","content":"Honey typically has a
+        pH between 3.4 and 6.1, with an average pH of about 3.9. The acidity of honey
+        is due to the presence of organic acids, primarily gluconic acid, which is
+        produced by glucose oxidase during honey formation."},{"role":"user","content":"What
+        about vinegar?"}],"temperature":0.0}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <SCRUBBED_OPENAI_API_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Jun 2025 02:59:42 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - user-mocyfzfqtusxbnhm0zzkagsd
+      Openai-Processing-Ms:
+      - '612'
+      Openai-Version:
+      - '2020-10-01'
+      X-Envoy-Upstream-Service-Time:
+      - '616'
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '9999'
+      X-Ratelimit-Remaining-Tokens:
+      - '199907'
+      X-Ratelimit-Reset-Requests:
+      - 8.64s
+      X-Ratelimit-Reset-Tokens:
+      - 27ms
+      X-Request-Id:
+      - req_6f5984999bf13e3f280dbba1e4366956
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=mxQPAnS7jTav4Dj3TJ8PI403lsJrFx4fllBO8XbELI4-1751079582-1.0.1.1-gVAd4YhuT1fweRyyl9b2oI.UEeLscnW3E3dHWRu9Xk4DihX9axdvLgu0l5AuZbrjAU2o6MRch7ZAi2f3mnpApw12VAs9vsvNMNYzTmg008k;
+        path=/; expires=Sat, 28-Jun-25 03:29:42 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=MVS4nkCN5AfIsQR5Hkx7kinzwAFVeMBOgNRJUFSvDeo-1751079582192-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 9569edf00e942f03-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-BnG4zhpOqNbgvTUYDv35uOSMhz3Ns",
+          "object": "chat.completion",
+          "created": 1751079581,
+          "model": "gpt-3.5-turbo-0125",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "The pH of vinegar typically ranges from 2.4 to 3.4, depending on the type of vinegar. The acidity of vinegar is primarily due to the presence of acetic acid, which is produced by the fermentation of ethanol by acetic acid bacteria.",
+                "refusal": null,
+                "annotations": []
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 103,
+            "completion_tokens": 53,
+            "total_tokens": 156,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "service_tier": "default",
+          "system_fingerprint": null
+        }
+  recorded_at: Sat, 28 Jun 2025 02:59:42 GMT
+recorded_with: VCR 6.3.1

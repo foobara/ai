@@ -1,17 +1,17 @@
 module Foobara
   module Ai
     module AnswerBot
-      class Ask < Foobara::Command
-        description "Ask a question and receive the knowledge you seek."
+      class GenerateNextMessage < Foobara::Command
+        description "Takes a chat and generates the next message using the model of your choice."
 
         inputs do
-          question :string, :required, "whatever you want to know!"
-          instructions :string, "Results in a system prompt. You can specify how you want the LLM to behave."
+          chat Types::Chat, :required
           service :service_enum, "If two services expose the same model, you can specify which one to use."
           model :model_enum, default: "claude-3-7-sonnet-20250219", description: "The model to use."
+          temperature :float
         end
 
-        result :string
+        result Types::Message
 
         AI_SERVICES.each_key do |service|
           command = Foobara::Ai::AnswerBot::DomainMappers::ServiceToChatCompletionCommand.map!(service)
@@ -23,10 +23,10 @@ module Foobara
           determine_ai_command
           run_ai_service
 
-          answer
+          next_message
         end
 
-        attr_accessor :ai_command, :response, :answer, :ai_service
+        attr_accessor :ai_command, :response, :ai_service, :next_message
 
         def determine_ai_service
           self.ai_service = service || domain_map!(model, from: :model_enum)
@@ -37,16 +37,11 @@ module Foobara
         end
 
         def run_ai_service
-          inputs = { question:, model: }
-
-          if instructions
-            inputs[:instructions] = instructions
-          end
-
+          inputs = { chat:, temperature:, model: }
           inputs = domain_map!(inputs, to: ai_command)
-          answer = run_subcommand!(ai_command, inputs)
+          next_message = run_subcommand!(ai_command, inputs)
 
-          self.answer = domain_map!(answer, to: :string)
+          self.next_message = domain_map!(next_message, to: Types::Message)
         end
       end
     end

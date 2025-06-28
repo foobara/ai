@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.anthropic.com/v1/messages
+    body:
+      encoding: UTF-8
+      string: '{"model":"claude-3-5-sonnet-20241022","max_tokens":1024,"messages":[{"role":"user","content":"What
+        is the pH of honey?"},{"role":"assistant","content":"Honey typically has a
+        pH between 3.4 and 6.1, with an average pH of about 3.9. The acidity of honey
+        is due to the presence of organic acids, primarily gluconic acid, which is
+        produced by glucose oxidase during honey formation."},{"role":"user","content":"What
+        about vinegar?"}],"temperature":0.0,"system":"You are like a scientist that
+        answers questions very concisely and accurately."}'
+    headers:
+      Content-Type:
+      - application/json
+      X-Api-Key:
+      - "<SCRUBBED_ANTHROPIC_API_KEY>"
+      Anthropic-Version:
+      - '2023-06-01'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Jun 2025 03:26:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Anthropic-Ratelimit-Input-Tokens-Limit:
+      - '80000'
+      Anthropic-Ratelimit-Input-Tokens-Remaining:
+      - '80000'
+      Anthropic-Ratelimit-Input-Tokens-Reset:
+      - '2025-06-28T03:26:26Z'
+      Anthropic-Ratelimit-Output-Tokens-Limit:
+      - '16000'
+      Anthropic-Ratelimit-Output-Tokens-Remaining:
+      - '16000'
+      Anthropic-Ratelimit-Output-Tokens-Reset:
+      - '2025-06-28T03:26:27Z'
+      Anthropic-Ratelimit-Requests-Limit:
+      - '1000'
+      Anthropic-Ratelimit-Requests-Remaining:
+      - '999'
+      Anthropic-Ratelimit-Requests-Reset:
+      - '2025-06-28T03:26:24Z'
+      Anthropic-Ratelimit-Tokens-Limit:
+      - '96000'
+      Anthropic-Ratelimit-Tokens-Remaining:
+      - '96000'
+      Anthropic-Ratelimit-Tokens-Reset:
+      - '2025-06-28T03:26:26Z'
+      Request-Id:
+      - req_011CQZuXqy8zVCYTj7uCAU63
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Anthropic-Organization-Id:
+      - 7a8e3751-3b70-4f90-a3ce-07f57c9d0bfc
+      Via:
+      - 1.1 google
+      Cf-Cache-Status:
+      - DYNAMIC
+      X-Robots-Tag:
+      - none
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 956a151c09d208cb-LAX
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"msg_01XXYfuax9Di4169RMip4az4","type":"message","role":"assistant","model":"claude-3-5-sonnet-20241022","content":[{"type":"text","text":"Vinegar
+        typically has a pH between 2.0 and 3.0. White distilled vinegar usually has
+        a pH of around 2.4, while apple cider vinegar ranges from 2.8 to 3.0."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":99,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":57,"service_tier":"standard"}}'
+  recorded_at: Sat, 28 Jun 2025 03:26:27 GMT
+recorded_with: VCR 6.3.1

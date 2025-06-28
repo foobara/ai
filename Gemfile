@@ -19,8 +19,8 @@ group :development do
 end
 
 group :development, :test do
-  gem "foobara-anthropic-api"
-  gem "foobara-ollama-api"
+  gem "foobara-anthropic-api" # , path: "../anthropic-api"
+  gem "foobara-ollama-api" # , path: "../ollama-api"
   gem "foobara-open-ai-api" # , path: "../open-ai-api"
   gem "pry"
   gem "pry-byebug"

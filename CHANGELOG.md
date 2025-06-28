@@ -1,3 +1,7 @@
+## [0.0.13] - 2025-06-27
+
+- Add GenerateChatCompletion command
+
 ## [0.0.12] - 2025-05-27
 
 - Do not load service models in parallel due to undiagnosed race condition somewhere
