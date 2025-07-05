@@ -1,3 +1,7 @@
+## [0.0.14] - 2025-07-05
+
+- o1 models don't support temperature so force it to 1
+
 ## [0.0.13] - 2025-06-27
 
 - Add GenerateChatCompletion command

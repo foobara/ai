@@ -50,7 +50,7 @@ RSpec.describe Foobara::Ai::AnswerBot::GenerateNextMessage do
   context "when using anthropic" do
     let(:model) { "claude-3-5-sonnet-20241022" }
 
-    it "is successful", vcr: { record: :once } do
+    it "is successful", vcr: { record: :none } do
       expect(outcome).to be_success
       expect(result.content).to match(/vinegar/i)
     end

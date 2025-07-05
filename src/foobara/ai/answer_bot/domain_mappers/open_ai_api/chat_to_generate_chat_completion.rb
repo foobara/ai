@@ -21,7 +21,9 @@ module Foobara
               }
 
               if temperature
-                inputs[:temperature] = temperature
+                # NOTE: some models don't support temperature, like o1. Instead of possibly receiving an error
+                # we will set the temperature to 1 which prevents a 400. Maybe print a warning instead?
+                inputs[:temperature] = model_supports_temperature? ? temperature : 1
               end
 
               if model
@@ -41,6 +43,10 @@ module Foobara
 
             def model
               from[:model]
+            end
+
+            def model_supports_temperature?
+              model && model.to_s !~ /\Ao1(-|$)/
             end
           end
         end
