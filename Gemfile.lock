@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    foobara-ai (0.0.14)
+    foobara-ai (1.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -55,12 +55,12 @@ GEM
       foobara-type-generator (~> 0.0.1)
       foobara-typescript-react-command-form-generator (~> 0.0.1)
       foobara-typescript-remote-command-generator (~> 0.0.1)
-    foobara (0.0.135)
+    foobara (0.0.136)
       bigdecimal
       foobara-lru-cache (~> 0.0.2)
       foobara-util (>= 1.0.0)
       inheritable-thread-vars (~> 0.0.1)
-    foobara-anthropic-api (0.0.11)
+    foobara-anthropic-api (1.0.1)
       foobara-cached-command
       foobara-http-api-command
     foobara-cached-command (0.0.2)
@@ -93,9 +93,9 @@ GEM
     foobara-lru-cache (0.0.2)
     foobara-mcp-connector-generator (0.0.6)
       foobara (~> 0.0.99)
-    foobara-ollama-api (0.0.5)
+    foobara-ollama-api (1.0.0)
       foobara-http-api-command
-    foobara-open-ai-api (0.0.13)
+    foobara-open-ai-api (1.0.1)
       foobara-cached-command
       foobara-http-api-command
     foobara-organization-generator (0.0.2)
@@ -131,7 +131,7 @@ GEM
       foobara-typescript-remote-command-generator (~> 0.0.1)
     foobara-typescript-remote-command-generator (0.0.24)
       foobara-files-generator (~> 0.0.1)
-    foobara-util (1.0.0)
+    foobara-util (1.0.1)
     formatador (1.1.0)
     guard (2.19.1)
       formatador (>= 0.2.4)
@@ -217,7 +217,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.4)
-    rubocop (1.77.0)
+    rubocop (1.78.0)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -275,10 +275,10 @@ PLATFORMS
 DEPENDENCIES
   foob
   foobara-ai!
-  foobara-anthropic-api
+  foobara-anthropic-api (>= 1.0.1, < 2.0.0)
   foobara-dotenv-loader
-  foobara-ollama-api
-  foobara-open-ai-api
+  foobara-ollama-api (>= 1.0.0, < 2.0.0)
+  foobara-open-ai-api (>= 1.0.1, < 2.0.0)
   foobara-rubocop-rules
   foobara-spec-helpers
   guard-rspec

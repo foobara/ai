@@ -7,32 +7,13 @@ module Foobara
     module AnswerBot
       foobara_domain!
 
-      require_relative "../../src/foobara/ai/answer_bot/types/service_enum"
+      require_relative "../../src/foobara/ai"
 
-      ai_services = {}
+      AI_SERVICES = Ai.installed_ai_services
 
-      if defined?(Foobara::Ai::OpenAiApi)
-        ai_services[Types::ServiceEnum::OPEN_AI] = OpenAiApi
-      end
-      if defined?(Foobara::Ai::AnthropicApi)
-        ai_services[Types::ServiceEnum::ANTHROPIC] = AnthropicApi
-      end
-      if defined?(Foobara::Ai::OllamaApi)
-        ai_services[Types::ServiceEnum::OLLAMA] = OllamaApi
-      end
-
-      if ai_services.empty?
-        # :nocov:
-        require "foobara/anthropic_api"
-        ai_services = { Types::ServiceEnum::ANTHROPIC => AnthropicApi }
-        # :nocov:
-      end
-
-      ai_services.each_value do |domain|
+      AI_SERVICES.each_value do |domain|
         foobara_depends_on domain
       end
-
-      AI_SERVICES = ai_services
 
       base_dir = "#{__dir__}/../../src/foobara/ai/answer_bot"
 
