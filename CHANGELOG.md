@@ -1,3 +1,7 @@
+## [1.0.1] - 2025-07-21
+
+- Fix namespacing bug
+
 ## [1.0.0] - 2025-07-09
 
 - Add .default_llm_model

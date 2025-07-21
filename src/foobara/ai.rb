@@ -35,7 +35,7 @@ module Foobara
         if @ai_services.empty?
           # :nocov:
           require "foobara/anthropic_api"
-          @ai_services = { Types::ServiceEnum::ANTHROPIC => AnthropicApi }
+          @ai_services = { AnswerBot::Types::ServiceEnum::ANTHROPIC => AnthropicApi }
           # :nocov:
         end
 
