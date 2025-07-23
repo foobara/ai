@@ -46,7 +46,7 @@ module Foobara
             end
 
             def model_supports_temperature?
-              model && model.to_s !~ /\Ao1(-|$)/
+              model && model.to_s !~ /\Ao[13](-|$)/
             end
           end
         end

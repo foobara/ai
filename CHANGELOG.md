@@ -1,3 +1,7 @@
+## [1.0.2] - 2025-07-23
+
+- o3 also doesn't support temperature
+
 ## [1.0.1] - 2025-07-21
 
 - Fix namespacing bug
