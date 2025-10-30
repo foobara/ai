@@ -44,9 +44,7 @@ module Foobara
         end
 
         def sort_models
-          models.sort_by! do |model|
-            [model.service, model.id]
-          end
+          models.sort_by!(&:id)
         end
       end
     end

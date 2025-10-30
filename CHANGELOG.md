@@ -1,3 +1,7 @@
+## [1.0.3] - 2025-10-30
+
+- Sort models by id instead of service,id for demo convenience
+
 ## [1.0.2] - 2025-07-23
 
 - o3 also doesn't support temperature
