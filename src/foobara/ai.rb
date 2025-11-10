@@ -32,7 +32,7 @@ module Foobara
           @ai_services[AnswerBot::Types::ServiceEnum::OLLAMA] = OllamaApi
         end
 
-        if @ai_services.empty?
+        if @ai_services.empty? && ENV["SKIP_AI_SERVICES"] != "true"
           # :nocov:
           require "foobara/anthropic_api"
           @ai_services = { AnswerBot::Types::ServiceEnum::ANTHROPIC => AnthropicApi }
@@ -43,7 +43,7 @@ module Foobara
       end
 
       def default_llm_model
-        @default_llm_model ||= installed_ai_services.values.first.default_llm_model
+        @default_llm_model ||= installed_ai_services&.values&.first&.default_llm_model
       end
     end
   end

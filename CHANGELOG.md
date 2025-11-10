@@ -1,3 +1,7 @@
+## [1.0.4] - 2025-11-10
+
+- Allow disabling automatic loading of AI services
+
 ## [1.0.3] - 2025-10-30
 
 - Sort models by id instead of service,id for demo convenience
