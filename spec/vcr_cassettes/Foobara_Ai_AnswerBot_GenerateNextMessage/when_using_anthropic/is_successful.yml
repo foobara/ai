@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.anthropic.com/v1/messages
     body:
       encoding: UTF-8
-      string: '{"model":"claude-3-5-sonnet-20241022","max_tokens":1024,"messages":[{"role":"user","content":"What
+      string: '{"model":"claude-sonnet-4-5-20250929","max_tokens":1024,"messages":[{"role":"user","content":"What
         is the pH of honey?"},{"role":"assistant","content":"Honey typically has a
         pH between 3.4 and 6.1, with an average pH of about 3.9. The acidity of honey
         is due to the presence of organic acids, primarily gluconic acid, which is
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Jun 2025 03:26:27 GMT
+      - Fri, 02 Jan 2026 15:18:10 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,49 +39,51 @@ http_interactions:
       Connection:
       - keep-alive
       Anthropic-Ratelimit-Input-Tokens-Limit:
-      - '80000'
+      - '2000000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '80000'
+      - '2000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2025-06-28T03:26:26Z'
+      - '2026-01-02T15:18:08Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
-      - '16000'
+      - '400000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
-      - '16000'
+      - '400000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2025-06-28T03:26:27Z'
+      - '2026-01-02T15:18:09Z'
       Anthropic-Ratelimit-Requests-Limit:
-      - '1000'
+      - '4000'
       Anthropic-Ratelimit-Requests-Remaining:
-      - '999'
+      - '3999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2025-06-28T03:26:24Z'
+      - '2026-01-02T15:18:06Z'
       Anthropic-Ratelimit-Tokens-Limit:
-      - '96000'
+      - '2400000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '96000'
+      - '2400000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2025-06-28T03:26:26Z'
+      - '2026-01-02T15:18:08Z'
       Request-Id:
-      - req_011CQZuXqy8zVCYTj7uCAU63
+      - req_011CWimsi4riUfNNBZ7rLCN9
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
       - 7a8e3751-3b70-4f90-a3ce-07f57c9d0bfc
-      Via:
-      - 1.1 google
+      Server:
+      - cloudflare
+      X-Envoy-Upstream-Service-Time:
+      - '3691'
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
       - none
-      Server:
-      - cloudflare
       Cf-Ray:
-      - 956a151c09d208cb-LAX
+      - 9b7b3a210c092f32-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"msg_01XXYfuax9Di4169RMip4az4","type":"message","role":"assistant","model":"claude-3-5-sonnet-20241022","content":[{"type":"text","text":"Vinegar
-        typically has a pH between 2.0 and 3.0. White distilled vinegar usually has
-        a pH of around 2.4, while apple cider vinegar ranges from 2.8 to 3.0."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":99,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":57,"service_tier":"standard"}}'
-  recorded_at: Sat, 28 Jun 2025 03:26:27 GMT
-recorded_with: VCR 6.3.1
+      string: '{"model":"claude-sonnet-4-5-20250929","id":"msg_01NsNAWMGtmHbmjHb2vzupGF","type":"message","role":"assistant","content":[{"type":"text","text":"Vinegar
+        typically has a pH between 2.4 and 3.4, with most common vinegars (like white
+        distilled vinegar) having a pH around 2.5 to 2.7.\n\nThis makes vinegar more
+        acidic than honey. The acidity comes from acetic acid, which is produced during
+        the fermentation process when bacteria convert alcohol into acetic acid."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":99,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":88,"service_tier":"standard"}}'
+  recorded_at: Fri, 02 Jan 2026 15:18:10 GMT
+recorded_with: VCR 6.4.0

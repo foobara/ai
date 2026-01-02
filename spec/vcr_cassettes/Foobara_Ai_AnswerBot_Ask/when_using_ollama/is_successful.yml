@@ -2,41 +2,66 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:11434/api/chat
+    uri: "<SCRUBBED_OLLAMA_API_URL>/api/chat"
     body:
       encoding: UTF-8
-      string: '{"messages":[{"role":"system","content":"You are a scientific-minded
-        assistant who answers concisely and precisely."},{"role":"user","content":"what
-        is the pH of honey?"}],"model":"smollm2:135m","stream":false}'
+      string: '{"model":"qwen3:4b","messages":[{"role":"system","content":"You are
+        a scientific-minded assistant who answers concisely and precisely."},{"role":"user","content":"what
+        is the pH of honey?"}],"stream":false}'
     headers:
       Content-Type:
       - application/json
+      X-Api-Key:
+      - "<SCRUBBED_OLLAMA_API_KEY>"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
       User-Agent:
       - Ruby
-      Host:
-      - localhost:11434
   response:
     status:
       code: 200
       message: OK
     headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 25 Feb 2025 18:43:00 GMT
-      Content-Length:
-      - '686'
+      - Fri, 02 Jan 2026 18:43:03 GMT
+      Via:
+      - 1.1 Caddy
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
-      string: '{"model":"smollm2:135m","created_at":"2025-02-25T18:43:00.978157012Z","message":{"role":"assistant","content":"The
-        pH level of honey varies depending on factors such as the origin, climate,
-        and processing method used to extract the honey from the nectar. Generally
-        speaking, honey with a higher concentration of polyphenols (the compounds
-        responsible for its distinctive flavor) has a slightly lower pH than honey
-        with lower levels of polyphenols or those that have undergone mechanical harvesting."},"done_reason":"stop","done":true,"total_duration":1848356731,"load_duration":531099395,"prompt_eval_count":35,"prompt_eval_duration":55000000,"eval_count":68,"eval_duration":1063000000}'
-  recorded_at: Tue, 25 Feb 2025 18:43:00 GMT
-recorded_with: VCR 6.3.1
+      string: '{"model":"qwen3:4b","created_at":"2026-01-02T18:43:03.869897797Z","message":{"role":"assistant","content":"\u003cthink\u003e\nOkay,
+        the user is asking about the pH of honey. I need to provide an accurate answer.
+        Let me recall what I know about honey''s pH.\n\nHoney is a natural product,
+        so its pH might be slightly acidic. I remember that honey has a low pH because
+        of the presence of organic acids like gluconic acid. But I should check the
+        exact range. From what I''ve studied, the pH of honey typically ranges from
+        3.0 to 4.5. Wait, but I should confirm if that''s correct. Different sources
+        might say different things. For example, some sources mention 3.2 to 4.5,
+        while others might say 3.0 to 4.5. The exact range can depend on factors like
+        the nectar source and the processing method. Also, the pH can vary based on
+        the type of flowers the bees collected nectar from. For instance, honey from
+        clover might have a different pH than honey from other flowers. Additionally,
+        the pH can change over time as the honey ages, but generally, it''s considered
+        to be in that range. I should also mention that the acidity is due to the
+        fermentation process and the presence of various acids. It''s important to
+        note that the pH is a key factor in honey''s preservation, as the low pH helps
+        prevent microbial growth. So, the answer should state the typical pH range
+        and explain the reasons behind it. Make sure to keep it concise and avoid
+        any unnecessary details. The user might be interested in the acidity level
+        for health reasons or to understand the properties of honey. I should also
+        mention that the pH is generally stable, but it can vary slightly. Alright,
+        putting it all together: the pH of honey is typically between 3.0 and 4.5,
+        due to the presence of organic acids like gluconic acid, and this range helps
+        in preserving the honey.\n\u003c/think\u003e\n\nThe pH of honey typically
+        ranges from **3.0 to 4.5**, depending on the nectar source and processing.
+        This acidity arises from natural organic acids like gluconic acid, which contribute
+        to honey''s stability and preservation."},"done_reason":"stop","done":true,"total_duration":43294859101,"load_duration":32600609,"prompt_eval_count":34,"prompt_eval_duration":99083161,"eval_count":436,"eval_duration":43160705137}'
+  recorded_at: Fri, 02 Jan 2026 18:43:03 GMT
+recorded_with: VCR 6.4.0

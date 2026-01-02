@@ -22,6 +22,12 @@ Dir["#{__dir__}/support/**/*.rb"].each { |f| require f }
 
 require "foobara/spec_helpers/all"
 
+# To rerecord this cassette:
+# 1. delete tmp/
+# 2. delete list_models.yml
+# 3. uncomment the raise below
+# 4. and change record: :none to record: :once
+# When done, of course, undo those changes
 VCR.use_cassette("list_models", record: :none) do
   require "foobara/open_ai_api"
   require "foobara/anthropic_api"
