@@ -33,10 +33,10 @@ module Foobara
         end
 
         if @ai_services.empty? && ENV["SKIP_AI_SERVICES"] != "true"
-          # :nocov:
+          # simplecov:disable
           require "foobara/anthropic_api"
           @ai_services = { AnswerBot::Types::ServiceEnum::ANTHROPIC => AnthropicApi }
-          # :nocov:
+          # simplecov:enable
         end
 
         @ai_services

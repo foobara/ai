@@ -28,11 +28,11 @@ module Foobara
         #         models = threads.each(&:join).map(&:value).flatten
 
         unless models.uniq == models
-          # :nocov:
+          # simplecov:disable
           # TODO: we should return something more complicated than a bare list of strings. Either a more
           # robust object or prefix strings with the relevant service to handle collisions.
           raise "Duplicate models detected"
-          # :nocov:
+          # simplecov:enable
         end
 
         ModelEnum = Foobara::Enumerated.make_module(models)

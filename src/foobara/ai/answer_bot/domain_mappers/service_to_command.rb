@@ -18,9 +18,9 @@ module Foobara
             when Types::ServiceEnum::OLLAMA
               Ai::OllamaApi::GenerateChatCompletion
             else
-              # :nocov:
+              # simplecov:disable
               raise "Unknown service: #{service}"
-              # :nocov:
+              # simplecov:enable
             end
           end
 

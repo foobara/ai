@@ -16,9 +16,9 @@ module Foobara
               return service if domain::Types::ModelEnum.value?(symbol)
             end
 
-            # :nocov:
+            # simplecov:disable
             raise "Unknown model: #{model}"
-            # :nocov:
+            # simplecov:enable
           end
 
           alias model from
