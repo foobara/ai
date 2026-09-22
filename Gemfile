@@ -20,7 +20,7 @@ group :development do
 end
 
 group :development, :test do
-  gem "foobara-anthropic-api", ">= 1.0.1", "< 2.0.0" # , path: "../anthropic-api"
+  gem "foobara-anthropic-api", ">= 1.0.8", "< 2.0.0" # , path: "../anthropic-api"
   gem "foobara-ollama-api", ">= 1.0.0", "< 2.0.0" # , path: "../ollama-api"
   gem "foobara-open-ai-api", ">= 1.0.1", "< 2.0.0" # , path: "../open-ai-api"
   gem "pry"

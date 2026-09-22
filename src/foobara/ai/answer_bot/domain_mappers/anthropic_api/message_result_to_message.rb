@@ -9,7 +9,7 @@ module Foobara
 
             def map
               {
-                content: message_result.content.last.text,
+                content: message_result.text,
                 role: message_result.role
               }
             end

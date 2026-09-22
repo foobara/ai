@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    foobara-ai (1.0.5)
+    foobara-ai (1.0.6)
 
 GEM
   remote: https://rubygems.org/
@@ -59,7 +59,7 @@ GEM
       foobara-lru-cache (< 2.0.0)
       foobara-util (< 2.0.0)
       inheritable-thread-vars (< 2.0.0)
-    foobara-anthropic-api (1.0.6)
+    foobara-anthropic-api (1.0.8)
       foobara (>= 0.4.1, < 2.0.0)
       foobara-cached-command (< 2.0.0)
       foobara-http-api-command (< 2.0.0)
@@ -271,7 +271,7 @@ PLATFORMS
 DEPENDENCIES
   foob (< 2.0.0)
   foobara-ai!
-  foobara-anthropic-api (>= 1.0.1, < 2.0.0)
+  foobara-anthropic-api (>= 1.0.8, < 2.0.0)
   foobara-dotenv-loader (< 2.0.0)
   foobara-ollama-api (>= 1.0.0, < 2.0.0)
   foobara-open-ai-api (>= 1.0.1, < 2.0.0)
@@ -314,8 +314,8 @@ CHECKSUMS
   ffi (1.17.4-x86_64-linux-musl) sha256=3fdf9888483de005f8ef8d1cf2d3b20d86626af206cbf780f6a6a12439a9c49e
   foob (0.1.2) sha256=0d9f7d7a059373a9740ec8f989a9f0a4dc272fec726732eb45af01147761648f
   foobara (0.6.4) sha256=52446b9e83ad0ec26b49066579936755bd30335a9308e0e16388624ebe9fd810
-  foobara-ai (1.0.5)
-  foobara-anthropic-api (1.0.6) sha256=df10bf3ca2bef9ba70d8ebf02a430beff8190e9f4752697db6cea7c22a63a83c
+  foobara-ai (1.0.6)
+  foobara-anthropic-api (1.0.8) sha256=e893238538f6631fe2db4540b1515bb15485ac6f352ad0ee4997183e31df962e
   foobara-cached-command (1.0.1) sha256=dc322ab083de76b5ca6a8e2942578a78621d0b04c2e787a3818ee7afc905ac5b
   foobara-command-generator (0.1.0) sha256=845b5f728cc92a35d2ced0046e232644a1d4c5e43846d902be3585b6de2051af
   foobara-domain-generator (0.0.3) sha256=d6071e56d937103ff4171cc9746412da4ccf7870a3c0397d1c7b19b6ee2990ab

@@ -8,7 +8,7 @@ module Foobara
             to :string
 
             def map
-              message.content.first.text
+              message.text
             end
 
             alias message from

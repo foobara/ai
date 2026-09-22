@@ -1,3 +1,7 @@
+## [1.0.6] - 2026-09-22
+
+- Fetch Anthropic content from MessageResule#text just to be safe
+
 ## [1.0.5] - 2026-09-22
 
 - Fix generate next message domain mapper selection problems using domain-specific model_enum
