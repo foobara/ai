@@ -1,3 +1,8 @@
+## [1.0.5] - 2026-09-22
+
+- Fix generate next message domain mapper selection problems using domain-specific model_enum
+- Make temperature optional/removed to deal with API changes/complications added to the API by Anthropic and OpenAI
+
 ## [1.0.4] - 2025-11-10
 
 - Allow disabling automatic loading of AI services

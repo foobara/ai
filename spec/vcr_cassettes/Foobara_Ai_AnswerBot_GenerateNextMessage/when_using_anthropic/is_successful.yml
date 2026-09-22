@@ -10,8 +10,8 @@ http_interactions:
         pH between 3.4 and 6.1, with an average pH of about 3.9. The acidity of honey
         is due to the presence of organic acids, primarily gluconic acid, which is
         produced by glucose oxidase during honey formation."},{"role":"user","content":"What
-        about vinegar?"}],"temperature":0.0,"system":"You are like a scientist that
-        answers questions very concisely and accurately."}'
+        about vinegar?"}],"system":"You are like a scientist that answers questions
+        very concisely and accurately."}'
     headers:
       Content-Type:
       - application/json
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 02 Jan 2026 15:18:10 GMT
+      - Tue, 22 Sep 2026 13:17:25 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,51 +39,58 @@ http_interactions:
       Connection:
       - keep-alive
       Anthropic-Ratelimit-Input-Tokens-Limit:
-      - '2000000'
+      - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '2000000'
+      - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-01-02T15:18:08Z'
+      - '2026-09-22T13:17:23Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
-      - '400000'
+      - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
-      - '400000'
+      - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-01-02T15:18:09Z'
+      - '2026-09-22T13:17:25Z'
       Anthropic-Ratelimit-Requests-Limit:
-      - '4000'
+      - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
-      - '3999'
+      - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-01-02T15:18:06Z'
+      - '2026-09-22T13:17:22Z'
       Anthropic-Ratelimit-Tokens-Limit:
-      - '2400000'
+      - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '2400000'
+      - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-01-02T15:18:08Z'
+      - '2026-09-22T13:17:23Z'
+      Server:
+      - cloudflare
       Request-Id:
-      - req_011CWimsi4riUfNNBZ7rLCN9
+      - req_011CfJYQaJfBXzLExXkQ7bM3
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
       - 7a8e3751-3b70-4f90-a3ce-07f57c9d0bfc
-      Server:
-      - cloudflare
-      X-Envoy-Upstream-Service-Time:
-      - '3691'
+      Anthropic-Workspace-Id:
+      - wrkspc_013AUxEybhVuYiAtdL5BCByf
+      Traceresponse:
+      - 00-0cccd3e285b4e67f84e57786d82656a9-dcb5d6cbe206b2d3-01
+      Vary:
+      - Accept-Encoding
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
       - none
       Cf-Ray:
-      - 9b7b3a210c092f32-LAX
+      - a3f196e84fc52db7-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-sonnet-4-5-20250929","id":"msg_01NsNAWMGtmHbmjHb2vzupGF","type":"message","role":"assistant","content":[{"type":"text","text":"Vinegar
-        typically has a pH between 2.4 and 3.4, with most common vinegars (like white
-        distilled vinegar) having a pH around 2.5 to 2.7.\n\nThis makes vinegar more
-        acidic than honey. The acidity comes from acetic acid, which is produced during
-        the fermentation process when bacteria convert alcohol into acetic acid."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":99,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":88,"service_tier":"standard"}}'
-  recorded_at: Fri, 02 Jan 2026 15:18:10 GMT
+      string: '{"model":"claude-sonnet-4-5-20250929","id":"msg_011CfJYQbCyq81cEHTMmpLhX","type":"message","role":"assistant","content":[{"type":"text","text":"Vinegar
+        typically has a pH between 2.4 and 3.4, with most common varieties (like white
+        distilled vinegar) averaging around 2.5 to 3.0.\n\nThis acidity is due to
+        acetic acid, which is the main acidic component in vinegar, usually present
+        at about 4-8% concentration. This makes vinegar significantly more acidic
+        than honey."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":99,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":91,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Tue, 22 Sep 2026 13:17:25 GMT
 recorded_with: VCR 6.4.0

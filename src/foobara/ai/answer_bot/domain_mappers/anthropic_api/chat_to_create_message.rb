@@ -6,10 +6,13 @@ module Foobara
       module DomainMappers
         module AnthropicApi
           class ChatToCreateMessage < Foobara::DomainMapper
+            # TODO: why doesn't this have a model?
             from do
               chat Types::Chat, :required
-              temperature :float
-              model :model_enum
+              # NOTE: temperature is not supported by Anthropic these days and it is ignored
+              temperature :float, :allow_nil, "temperature is not supported by Anthropic these days and it is ignored"
+              # TODO: shouldn't this be in Types prefix??
+              model :"Foobara::Ai::AnthropicApi::model_enum"
             end
             to Foobara::Ai::AnthropicApi::CreateMessage
 
@@ -26,10 +29,6 @@ module Foobara
                 inputs[:system] = system_messages.map(&:content).join("\n")
               end
 
-              if temperature
-                inputs[:temperature] = temperature
-              end
-
               if model
                 inputs[:model] = model
               end
@@ -39,10 +38,6 @@ module Foobara
 
             def chat
               from[:chat]
-            end
-
-            def temperature
-              from[:temperature]
             end
 
             def model

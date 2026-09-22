@@ -8,7 +8,7 @@ module Foobara
           chat Types::Chat, :required
           service :service_enum, "If two services expose the same model, you can specify which one to use."
           model :model_enum, default: Ai.default_llm_model, description: "The model to use."
-          temperature :float
+          temperature :float, :allow_nil
         end
 
         result Types::Message

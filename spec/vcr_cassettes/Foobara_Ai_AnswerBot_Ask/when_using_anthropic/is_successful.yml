@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 02 Jan 2026 16:52:17 GMT
+      - Tue, 22 Sep 2026 13:12:54 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -35,52 +35,57 @@ http_interactions:
       Connection:
       - keep-alive
       Anthropic-Ratelimit-Input-Tokens-Limit:
-      - '2000000'
+      - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Remaining:
-      - '2000000'
+      - '10000000'
       Anthropic-Ratelimit-Input-Tokens-Reset:
-      - '2026-01-02T16:52:15Z'
+      - '2026-09-22T13:12:52Z'
       Anthropic-Ratelimit-Output-Tokens-Limit:
-      - '400000'
+      - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Remaining:
-      - '400000'
+      - '2000000'
       Anthropic-Ratelimit-Output-Tokens-Reset:
-      - '2026-01-02T16:52:17Z'
+      - '2026-09-22T13:12:54Z'
       Anthropic-Ratelimit-Requests-Limit:
-      - '4000'
+      - '10000'
       Anthropic-Ratelimit-Requests-Remaining:
-      - '3999'
+      - '9999'
       Anthropic-Ratelimit-Requests-Reset:
-      - '2026-01-02T16:52:13Z'
+      - '2026-09-22T13:12:50Z'
       Anthropic-Ratelimit-Tokens-Limit:
-      - '2400000'
+      - '12000000'
       Anthropic-Ratelimit-Tokens-Remaining:
-      - '2400000'
+      - '12000000'
       Anthropic-Ratelimit-Tokens-Reset:
-      - '2026-01-02T16:52:15Z'
+      - '2026-09-22T13:12:52Z'
+      Server:
+      - cloudflare
       Request-Id:
-      - req_011CWiu3ySRVENDfvUJLp5ha
+      - req_011CfJY4XCaCkdQD8ec1d7HX
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Anthropic-Organization-Id:
       - 7a8e3751-3b70-4f90-a3ce-07f57c9d0bfc
-      Server:
-      - cloudflare
-      X-Envoy-Upstream-Service-Time:
-      - '3972'
+      Anthropic-Workspace-Id:
+      - wrkspc_013AUxEybhVuYiAtdL5BCByf
+      Traceresponse:
+      - 00-e9bfdb96c30e117a0b753e1700457e05-116d78b4ade3b70f-01
+      Vary:
+      - Accept-Encoding
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'
       Cf-Cache-Status:
       - DYNAMIC
       X-Robots-Tag:
       - none
       Cf-Ray:
-      - 9b7bc3fecfacf514-LAX
+      - a3f190441eb84e43-LAX
     body:
       encoding: ASCII-8BIT
-      string: '{"model":"claude-sonnet-4-5-20250929","id":"msg_01HKyt4697Q1JNk8VvsBUfhu","type":"message","role":"assistant","content":[{"type":"text","text":"The
-        pH of honey typically ranges from **3.5 to 4.5**, with most varieties falling
-        between **3.9 and 4.2**.\n\nThis acidity is due to the presence of organic
-        acids, primarily gluconic acid, which is produced when the enzyme glucose
-        oxidase breaks down glucose. The acidic pH helps give honey its preservative
-        properties and contributes to its antimicrobial characteristics."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":29,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":90,"service_tier":"standard"}}'
-  recorded_at: Fri, 02 Jan 2026 16:52:17 GMT
+      string: '{"model":"claude-sonnet-4-5-20250929","id":"msg_011CfJY4Y2h6ReDGv4Weeqs9","type":"message","role":"assistant","content":[{"type":"text","text":"The
+        pH of honey typically ranges from **3.4 to 6.1**, with most varieties falling
+        between **3.5 and 4.5**, making it acidic.\n\nThe acidity varies depending
+        on the floral source, with factors like the types of acids present (primarily
+        gluconic acid) and mineral content influencing the exact pH value."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":29,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":78,"service_tier":"standard","inference_geo":"not_available"}}'
+  recorded_at: Tue, 22 Sep 2026 13:12:54 GMT
 recorded_with: VCR 6.4.0

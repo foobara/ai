@@ -8,8 +8,9 @@ module Foobara
           class ChatToGenerateChatCompletion < Foobara::DomainMapper
             from do
               chat Types::Chat, :required
-              temperature :float
-              model :model_enum
+              temperature :float, :allow_nil
+              # TODO: shouldn't this be in Types prefix??
+              model :"Foobara::Ai::OllamaApi::model_enum"
             end
             to Foobara::Ai::OllamaApi::GenerateChatCompletion
 

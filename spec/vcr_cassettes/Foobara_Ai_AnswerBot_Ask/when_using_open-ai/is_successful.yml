@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"You
         are a scientific-minded assistant who answers concisely and precisely."},{"role":"user","content":"what
-        is the pH of honey?"}]}'
+        is the pH of honey?"}],"temperature":null}'
     headers:
       Content-Type:
       - application/json
@@ -19,76 +19,77 @@ http_interactions:
       - "*/*"
       User-Agent:
       - Ruby
-      Host:
-      - api.openai.com
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Mon, 17 Feb 2025 00:06:39 GMT
+      - Tue, 22 Sep 2026 13:13:21 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Cf-Ray:
+      - a3f190effb25db66-LAX
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
       Access-Control-Expose-Headers:
+      - CF-Ray
+      - CF-Ray
       - X-Request-ID
       Openai-Organization:
       - user-mocyfzfqtusxbnhm0zzkagsd
       Openai-Processing-Ms:
-      - '323'
+      - '2600'
+      Openai-Project:
+      - proj_Y5GABMXv3WwvLgiO5BO8n1Se
       Openai-Version:
       - '2020-10-01'
+      X-Openai-Proxy-Wasm:
+      - v0.1
       X-Ratelimit-Limit-Requests:
-      - '10000'
+      - '5000'
       X-Ratelimit-Limit-Tokens:
-      - '200000'
+      - '2000000'
       X-Ratelimit-Remaining-Requests:
-      - '9999'
+      - '4999'
       X-Ratelimit-Remaining-Tokens:
-      - '199957'
+      - '1999972'
       X-Ratelimit-Reset-Requests:
-      - 8.64s
-      X-Ratelimit-Reset-Tokens:
       - 12ms
+      X-Ratelimit-Reset-Tokens:
+      - 0s
       X-Request-Id:
-      - req_e7229f5ef382366b4ce3004b3a2a8963
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Cf-Cache-Status:
-      - DYNAMIC
+      - req_609d60a6a76c4a19842b4cad6ad49959
       Set-Cookie:
-      - __cf_bm=jRqukHSDvtZjA0j4ywCpjNWI2D0Jq.BuJDFpnOtnlDE-1739750799-1.0.1.1-BR85SdPGMP1XiUxRYDDfgk3JX1o7KeEqJaOxkgtGNaPzvV_Mwfy6wmAs_9zqmOXfo735wokKeOdCv6Lqh.gMkw;
-        path=/; expires=Mon, 17-Feb-25 00:36:39 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=N4OliXKxzY0GXv9AvDjGC8B52kijBK6usY1iuKFIGCI-1739750799228-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
-      X-Content-Type-Options:
-      - nosniff
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 91318857bdf6cf23-SJC
+      - "<SCRUBBED>"
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-B1iwgVyvnDtWo9q8GJ4P2TdeeDfGU",
+          "id": "chatcmpl-EQub9Js4cZXxn7pzLnPfYIF1s64RZ",
           "object": "chat.completion",
-          "created": 1739750798,
+          "created": 1790082799,
           "model": "gpt-3.5-turbo-0125",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "The pH of honey typically ranges between 3.2 and 4.5.",
-                "refusal": null
+                "content": "The pH of honey typically ranges from 3.4 to 6.1, with an average pH around 3.9.",
+                "refusal": null,
+                "annotations": []
               },
               "logprobs": null,
               "finish_reason": "stop"
@@ -96,8 +97,8 @@ http_interactions:
           ],
           "usage": {
             "prompt_tokens": 32,
-            "completion_tokens": 18,
-            "total_tokens": 50,
+            "completion_tokens": 27,
+            "total_tokens": 59,
             "prompt_tokens_details": {
               "cached_tokens": 0,
               "audio_tokens": 0
@@ -112,5 +113,5 @@ http_interactions:
           "service_tier": "default",
           "system_fingerprint": null
         }
-  recorded_at: Mon, 17 Feb 2025 00:06:39 GMT
-recorded_with: VCR 6.3.1
+  recorded_at: Tue, 22 Sep 2026 13:13:22 GMT
+recorded_with: VCR 6.4.0
