@@ -29,41 +29,14 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 22 Sep 2026 13:13:50 GMT
+      - Wed, 21 Oct 2026 04:02:09 GMT
       Via:
       - 1.1 Caddy
       Transfer-Encoding:
       - chunked
     body:
-      encoding: UTF-8
-      string: '{"model":"qwen3:4b","created_at":"2026-09-22T13:13:50.636552235Z","message":{"role":"assistant","content":"\u003cthink\u003e\nOkay,
-        the user is asking about the pH of honey. I need to recall what I know about
-        honey''s acidity. I remember that honey is a natural product, and it''s known
-        for its sweetness and preservative properties. But what''s the pH?\n\nI think
-        honey is slightly acidic. I recall that the pH of honey can vary depending
-        on factors like the type of flower it comes from and the processing method.
-        For example, honey from different nectar sources might have different pH levels.
-        Also, the pH can change over time as the honey ages.\n\nWait, I should check
-        the typical range. I remember that the pH of honey is usually between 3.0
-        and 4.5. That''s quite acidic. But why is that the case? Honey contains various
-        components like sugars, enzymes, and acids. Fructose and glucose are the main
-        sugars, but there are also organic acids like gluconic acid, which contribute
-        to the acidity.\n\nSo, the pH is in that range because of these acids. Also,
-        the pH might be influenced by the floral source. For instance, honey from
-        clover might have a different pH than honey from buckwheat. Additionally,
-        the pH can decrease as the honey ages, which is why it''s important to store
-        honey properly to maintain its quality.\n\nI should also mention that the
-        pH is important because it affects the preservation of honey. The low pH helps
-        prevent the growth of bacteria and other microorganisms, which is why honey
-        has a long shelf life. However, the exact pH can vary, so it''s not a fixed
-        value. The user might be interested in this for health reasons or in understanding
-        the properties of honey.\n\nI need to present this information clearly. Start
-        by stating the typical range, explain the factors that influence it, and mention
-        the significance of the pH in terms of preservation. Make sure to keep it
-        concise and avoid unnecessary details.\n\u003c/think\u003e\n\nHoney typically
-        has a pH range of **3.0 to 4.5**, depending on the floral source and processing.
-        This acidity arises from natural components like gluconic acid and fructose,
-        which contribute to its preservative properties. The pH decreases slightly
-        over time as honey ages."},"done_reason":"stop","done":true,"total_duration":1981553413,"load_duration":34649886,"prompt_eval_count":34,"prompt_eval_duration":23081711,"eval_count":445,"eval_duration":1921432880}'
-  recorded_at: Tue, 22 Sep 2026 13:13:50 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtb2RlbCI6InF3ZW4zOjRiIiwiY3JlYXRlZF9hdCI6IjIwMjYtMTAtMjFUMDQ6MDI6MDkuMjY1ODQ0Mzk2WiIsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJIb25leSBoYXMgYSBwSCByYW5naW5nIGZyb20gKiphcHByb3hpbWF0ZWx5IDMuMiB0byA2LjEqKiwgYnV0ICoqdHlwaWNhbGx5IDMuNeKAkzQuMCoqIGZvciByYXcgaG9uZXkuIFRoaXMgc2xpZ2h0IGFjaWRpdHkgYXJpc2VzIGZyb20gbmF0dXJhbCBjb21wb3VuZHMgaW4gZmxvcmFsIG5lY3RhciBhbmQgaXMgY29uc2lzdGVudCBhY3Jvc3MgbW9zdCBzdHVkaWVzLiBUaGUgZXhhY3QgdmFsdWUgdmFyaWVzIHNsaWdodGx5IGJ5IGhvbmV5IHR5cGUgYW5kIHByb2Nlc3NpbmcuIiwidGhpbmtpbmciOiJPa2F5LCB0aGUgdXNlciBpcyBhc2tpbmcgYWJvdXQgdGhlIHBIIG9mIGhvbmV5LiBMZXQgbWUgcmVjYWxsIHdoYXQgSSBrbm93IGFib3V0IGhvbmV5J3MgYWNpZGl0eS4gSG9uZXkgaXMgYSBuYXR1cmFsIHByb2R1Y3QgbWFkZSBieSBiZWVzIGZyb20gZmxvcmFsIG5lY3Rhci4gSSByZW1lbWJlciB0aGF0IGhvbmV5IGlzIHNsaWdodGx5IGFjaWRpYywgYnV0IEkgbmVlZCB0byBiZSBwcmVjaXNlIGhlcmUuIFxuXG5IbW0sIEkgdGhpbmsgdGhlIHR5cGljYWwgcEggcmFuZ2UgZm9yIGhvbmV5IGlzIGJldHdlZW4gMy4yIGFuZCA2LjEuIEJ1dCB0aGF0IHNlZW1zIGEgYml0IHdpZGUuIFdhaXQsIG1vc3Qgc291cmNlcyBJJ3ZlIHNlZW4gaW5kaWNhdGUgaXQncyBhcm91bmQgMy41IHRvIDQuMC4gTGV0IG1lIGRvdWJsZS1jaGVjayB0aGF0LiBcblxuSSByZWNhbGwgdGhhdCByYXcgaG9uZXkgdGVuZHMgdG8gYmUgbW9yZSBhY2lkaWMgdGhhbiBwcm9jZXNzZWQgaG9uZXkuIFRoZSBhY2lkaXR5IGNvbWVzIGZyb20gbmF0dXJhbCBjb21wb3VuZHMgbGlrZSBhY2lkcyBpbiB0aGUgbmVjdGFyLiBBbHNvLCBob25leSBoYXMgYSBsb3cgcEggYmVjYXVzZSBvZiBpdHMgc3VnYXIgY29udGVudCBhbmQgdGhlIHByZXNlbmNlIG9mIG9yZ2FuaWMgYWNpZHMuIFxuXG5UaGUgdXNlciBtaWdodCBiZSBhc2tpbmcgdGhpcyBmb3IgaGVhbHRoIHJlYXNvbnMsIGxpa2Ugd2hldGhlciBob25leSBpcyBzYWZlIGZvciBwZW9wbGUgd2l0aCBhY2lkIHJlZmx1eCBvciBpZiBpdCBhZmZlY3RzIGRlbnRhbCBoZWFsdGguIEJ1dCB0aGV5IGp1c3Qgd2FudCB0aGUgcEggdmFsdWUsIHNvIEkgc2hvdWxkIGtlZXAgaXQgY29uY2lzZS4gXG5cbkkgc2hvdWxkIG1lbnRpb24gdGhhdCB0aGUgZXhhY3QgcEggY2FuIHZhcnkgZGVwZW5kaW5nIG9uIHRoZSB0eXBlIG9mIGhvbmV5IGFuZCB3aGVyZSBpdCdzIHByb2R1Y2VkLiBCdXQgdGhlIHN0YW5kYXJkIHJhbmdlIGlzIGFib3V0IDMuMiB0byA2LjEsIHdpdGggbW9zdCBob25leSBiZWluZyBhcm91bmQgMy41IHRvIDQuMC4gXG5cbldhaXQsIEkgdGhpbmsgdGhlIG1vc3QgY29tbW9ubHkgY2l0ZWQgdmFsdWUgaXMgMy41IHRvIDQuMC4gTGV0IG1lIGNvbmZpcm0gd2l0aCByZWxpYWJsZSBzb3VyY2VzLiBZZXMsIHNjaWVudGlmaWMgbGl0ZXJhdHVyZSBzaG93cyB0aGF0IGhvbmV5IGhhcyBhIHBIIG9mIGFwcHJveGltYXRlbHkgMy41IHRvIDQuMC4gVGhhdCdzIHRoZSB0eXBpY2FsIHJhbmdlIGZvciByYXcgaG9uZXkuIFxuXG5BbHNvLCB0aGUgdXNlciBzYWlkIFwic2NpZW50aWZpYy1taW5kZWRcIiBzbyBJIHNob3VsZCBiZSBwcmVjaXNlIGJ1dCBub3QgdG9vIHRlY2huaWNhbC4gVGhleSB3YW50IGEgY29uY2lzZSBhbnN3ZXIuIFNvIEknbGwgc3RhdGUgdGhlIHBIIHJhbmdlIGFuZCBub3RlIHRoYXQgaXQncyBzbGlnaHRseSBhY2lkaWMuIFxuXG5JIHNob3VsZCBhdm9pZCBzYXlpbmcgaXQncyBhbHdheXMgZXhhY3RseSAzLjUgYmVjYXVzZSB0aGF0J3Mgbm90IGFjY3VyYXRlLiBWYXJpYXRpb25zIGV4aXN0LiBCdXQgdGhlIGtleSBwb2ludCBpcyBpdCdzIGFjaWRpYywgd2hpY2ggaXMgd2h5IGhvbmV5IGNhbiBiZSBiZW5lZmljaWFsIGZvciBkZW50YWwgaGVhbHRoIGJ5IHByZXZlbnRpbmcgY2F2aXRpZXMuIFxuXG5UaGUgdXNlciBtaWdodCBiZSBhIHN0dWRlbnQsIGEgaGVhbHRoIGVudGh1c2lhc3QsIG9yIHNvbWVvbmUgY29uY2VybmVkIGFib3V0IGFjaWRpdHkgaW4gdGhlaXIgZGlldC4gU2luY2UgdGhleSBhc2tlZCBjb25jaXNlbHksIEknbGwga2VlcCBpdCB0byB0aGUgcG9pbnQgd2l0aG91dCBleHRyYSBmbHVmZi4gXG5cbkZpbmFsIGFuc3dlcjogSG9uZXkgaGFzIGEgcEggcmFuZ2luZyBmcm9tIGFwcHJveGltYXRlbHkgMy4yIHRvIDYuMSwgYnV0IHR5cGljYWxseSAzLjUgdG8gNC4wLCBtYWtpbmcgaXQgc2xpZ2h0bHkgYWNpZGljLlxuIn0sImRvbmUiOnRydWUsImRvbmVfcmVhc29uIjoic3RvcCIsInRvdGFsX2R1cmF0aW9uIjoxNjcxOTM2MjkyLCJsb2FkX2R1cmF0aW9uIjo1OTE3Njg0LCJwcm9tcHRfZXZhbF9jb3VudCI6MzYsInByb21wdF9ldmFsX2NhY2hlZF9jb3VudCI6NSwicHJvbXB0X2V2YWxfZHVyYXRpb24iOjg3ODUwMDAsImV2YWxfY291bnQiOjU0NCwiZXZhbF9kdXJhdGlvbiI6MTYwNTkyODAwMH0=
+  recorded_at: Wed, 21 Oct 2026 04:02:09 GMT
 recorded_with: VCR 6.4.0

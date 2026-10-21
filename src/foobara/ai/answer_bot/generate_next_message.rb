@@ -9,9 +9,12 @@ module Foobara
           service :service_enum, "If two services expose the same model, you can specify which one to use."
           model :model_enum, default: Ai.default_llm_model, description: "The model to use."
           temperature :float, :allow_nil
+          # TODO: add fail_if_hitting_token_limit flag
         end
 
         result Types::Message
+
+        possible_error :message_response_was_blank, context: { service: :service_enum, model: :model_enum }
 
         AI_SERVICES.each_key do |service|
           command = Foobara::Ai::AnswerBot::DomainMappers::ServiceToChatCompletionCommand.map!(service)
@@ -39,9 +42,18 @@ module Foobara
         def run_ai_service
           inputs = { chat:, temperature:, model: }
           inputs = domain_map!(inputs, to: ai_command)
-          next_message = run_subcommand!(ai_command, inputs)
+          message = run_subcommand!(ai_command, inputs)
 
-          self.next_message = domain_map!(next_message, to: Types::Message)
+          self.next_message = domain_map!(message, to: Types::Message)
+
+          if next_message.content.nil?
+            context = { model: }
+            context[:service] = service if service
+
+            add_runtime_error :message_response_was_blank,
+                              "#{ai_command} #{model} responded successfully but response contained no text.",
+                              **context
+          end
         end
       end
     end

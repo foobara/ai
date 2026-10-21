@@ -1,3 +1,7 @@
+## [1.0.7] - 2026-10-20
+
+- Handle situation where LLM replies but gives no text
+
 ## [1.0.6] - 2026-09-22
 
 - Fetch Anthropic content from MessageResule#text just to be safe

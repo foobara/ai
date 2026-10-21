@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 22 Sep 2026 13:13:21 GMT
+      - Wed, 21 Oct 2026 04:01:24 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -33,7 +33,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - a3f190effb25db66-LAX
+      - a4dd5c536cdd80fd-SJC
       Cf-Cache-Status:
       - DYNAMIC
       Server:
@@ -49,7 +49,7 @@ http_interactions:
       Openai-Organization:
       - user-mocyfzfqtusxbnhm0zzkagsd
       Openai-Processing-Ms:
-      - '2600'
+      - '1116'
       Openai-Project:
       - proj_Y5GABMXv3WwvLgiO5BO8n1Se
       Openai-Version:
@@ -69,7 +69,7 @@ http_interactions:
       X-Ratelimit-Reset-Tokens:
       - 0s
       X-Request-Id:
-      - req_609d60a6a76c4a19842b4cad6ad49959
+      - req_c920ead188eb4337885b96b133f9259b
       Set-Cookie:
       - "<SCRUBBED>"
       Alt-Svc:
@@ -78,16 +78,16 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-EQub9Js4cZXxn7pzLnPfYIF1s64RZ",
+          "id": "chatcmpl-EbHnvpFPi6KqEKlYJFJr0oxF2U9xw",
           "object": "chat.completion",
-          "created": 1790082799,
+          "created": 1792555283,
           "model": "gpt-3.5-turbo-0125",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "The pH of honey typically ranges from 3.4 to 6.1, with an average pH around 3.9.",
+                "content": "The typical pH of honey ranges from 3.4 to 6.1, with an average pH of around 3.9.",
                 "refusal": null,
                 "annotations": []
               },
@@ -97,8 +97,8 @@ http_interactions:
           ],
           "usage": {
             "prompt_tokens": 32,
-            "completion_tokens": 27,
-            "total_tokens": 59,
+            "completion_tokens": 28,
+            "total_tokens": 60,
             "prompt_tokens_details": {
               "cached_tokens": 0,
               "audio_tokens": 0
@@ -113,5 +113,5 @@ http_interactions:
           "service_tier": "default",
           "system_fingerprint": null
         }
-  recorded_at: Tue, 22 Sep 2026 13:13:22 GMT
+  recorded_at: Wed, 21 Oct 2026 04:01:24 GMT
 recorded_with: VCR 6.4.0

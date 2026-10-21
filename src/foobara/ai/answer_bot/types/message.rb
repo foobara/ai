@@ -5,7 +5,7 @@ module Foobara
         class Message < Foobara::Model
           attributes do
             role :symbol, one_of: [:assistant, :user, :system]
-            content :string
+            content :string, :allow_nil
           end
 
           def system?

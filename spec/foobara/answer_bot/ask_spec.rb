@@ -23,7 +23,7 @@ RSpec.describe Foobara::Ai::AnswerBot::Ask do
   end
 
   context "when using anthropic" do
-    let(:model) { "claude-sonnet-4-5-20250929" }
+    let(:model) { "claude-sonnet-5-5" }
 
     it "is successful", vcr: { record: :none } do
       expect(outcome).to be_success
