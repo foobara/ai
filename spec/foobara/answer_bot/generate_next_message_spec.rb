@@ -54,6 +54,19 @@ RSpec.describe Foobara::Ai::AnswerBot::GenerateNextMessage do
       expect(outcome).to be_success
       expect(result.content).to match(/vinegar/i)
     end
+
+    context "when there's no text in the result" do
+      before do
+        allow_any_instance_of(
+          Foobara::Ai::AnthropicApi::Types::MessageResult
+        ).to receive(:text).and_return(nil)
+      end
+
+      it "results in a message_response_was_blank error", vcr: { record: :none } do
+        expect(outcome).to_not be_success
+        expect(errors_hash.keys).to include("runtime.message_response_was_blank")
+      end
+    end
   end
 
   context "when using ollama" do
